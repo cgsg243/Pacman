@@ -1,0 +1,61 @@
+import { Pst_Primitive } from '../rnd/pst_primitive.js';
+
+export class Pst_Coin
+{
+    constructor(tileX, tileY, device)
+    {
+        this.tileX = tileX;
+        this.tileY = tileY;
+        this.device = device;
+        this.vbo = null;
+        this.ibo = null;
+        this.indexCount = 0;
+    }
+
+    getPosition()
+    {
+        return {
+            x: this.tileX + 0.5,
+            y: this.tileY + 0.5,
+        };
+    }
+
+    initGeometry()
+    {
+        if (this.vbo)
+          return;
+
+        const prim = Pst_Primitive.coin(0.2, 12, 0);
+
+        let vbSize = prim.vertices.byteLength;
+        if (vbSize % 4 !== 0) { vbSize += 4 - (vbSize % 4); const pad = new Float32Array(vbSize / 4); pad.set(prim.vertices); prim.vertices = pad; }
+        let ibSize = prim.indices.byteLength;
+        if (ibSize % 4 !== 0) { ibSize += 4 - (ibSize % 4); const pad = new Uint16Array(ibSize / 2); pad.set(prim.indices); prim.indices = pad; }
+
+        this.vbo = this.device.createBuffer({ size: vbSize, usage: GPUBufferUsage.VERTEX, mappedAtCreation: true });
+        new Float32Array(this.vbo.getMappedRange()).set(prim.vertices); this.vbo.unmap();
+        this.ibo = this.device.createBuffer({ size: ibSize, usage: GPUBufferUsage.INDEX, mappedAtCreation: true });
+        new Uint16Array(this.ibo.getMappedRange()).set(prim.indices); this.ibo.unmap();
+        this.indexCount = prim.indices.length;
+    }
+
+    draw(device, pass, pipeline, bindGroup, uniformBuffer, scaleX, scaleY, worldW, worldH, maze)
+    {
+        if (!this.vbo || maze.grid[this.tileY][this.tileX] !== 2)
+           return;
+
+        const pos = this.getPosition();
+        const model = new Float32Array(16);
+        model.fill(0);
+        model[0] = scaleX; model[5] = scaleY; model[10] = 1; model[15] = 1;
+        model[12] = pos.x * scaleX - 1;
+        model[13] = pos.y * scaleY - 1;
+
+        device.queue.writeBuffer(uniformBuffer, 0, model);
+        pass.setPipeline(pipeline);
+        pass.setBindGroup(0, bindGroup);
+        pass.setVertexBuffer(0, this.vbo);
+        pass.setIndexBuffer(this.ibo, 'uint16');
+        pass.drawIndexed(this.indexCount);
+    }
+}
