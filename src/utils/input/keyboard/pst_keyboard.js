@@ -2,8 +2,8 @@ export class Pst_Keyboard
 {
     constructor()
     {
-        this._keys = {};
-        this._justPressed = {};
+        this.keys = {};
+        this.justPressed = {};
     }
 
     init()
@@ -11,38 +11,38 @@ export class Pst_Keyboard
         window.addEventListener('keydown', (e) =>
         {
             e.preventDefault();
-            if (!this._keys[e.code])
+            if (!this.keys[e.code])
             {
-                this._justPressed[e.code] = true;
+                this.justPressed[e.code] = true;
             }
-            this._keys[e.code] = true;
+            this.keys[e.code] = true;
         });
 
         window.addEventListener('keyup', (e) =>
         {
             e.preventDefault();
-            this._keys[e.code] = false;
+            this.keys[e.code] = false;
         });
 
         window.addEventListener('blur', (e) =>
         {
             e.preventDefault();
-            this._keys = {};
+            this.keys = {};
         });
     }
 
     isDown(code)
     {
-        return !!this._keys[code];
+        return !!this.keys[code];
     }
 
     wasPressed(code)
     {
-        return !!this._justPressed[code];
+        return !!this.justPressed[code];
     }
 
     endFrame()
     {
-        this._justPressed = {};
+        this.justPressed = {};
     }
 }

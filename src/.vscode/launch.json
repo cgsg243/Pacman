@@ -1,15 +1,39 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "type": "firefox",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
+            "name": "Launch Firefox with WebGPU",
             "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
+            "reAttach": true,
+            "pathMappings": [
+                {
+                    "url": "http://localhost:8080",
+                    "path": "${workspaceFolder}"
+                }
+            ],
+            "runtimeArgs": [
+                "--enable-webgpu"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Server",
+            "program": "${workspaceFolder}/server-socketio.js",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PORT": "8080"
+            },
+            "skipFiles": ["<node_internals>/**"]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch Server + Firefox (WebGPU)",
+            "configurations": ["Launch Server", "Launch Firefox with WebGPU"]
         }
     ]
 }

@@ -23,7 +23,7 @@ export class Pst_Coin
     initGeometry()
     {
         if (this.vbo)
-          return;
+           return;
 
         const prim = Pst_Primitive.coin(0.2, 12, 0);
 
@@ -41,13 +41,16 @@ export class Pst_Coin
 
     draw(device, pass, pipeline, bindGroup, uniformBuffer, scaleX, scaleY, worldW, worldH, maze)
     {
-        if (!this.vbo || maze.grid[this.tileY][this.tileX] !== 2)
-           return;
+        // if (maze.grid[this.tileY][this.tileX] !== 2)
+        //    return;
 
         const pos = this.getPosition();
         const model = new Float32Array(16);
         model.fill(0);
-        model[0] = scaleX; model[5] = scaleY; model[10] = 1; model[15] = 1;
+        model[0] = scaleX;
+        model[5] = scaleY;
+        model[10] = 1;
+        model[15] = 1;
         model[12] = pos.x * scaleX - 1;
         model[13] = pos.y * scaleY - 1;
 

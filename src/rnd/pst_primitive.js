@@ -188,6 +188,7 @@ export class Pst_Primitive
     {
         const verts = [];
         const inds = [];
+        
         verts.push(0, 0, 0, 0.5, 0.5);
 
         for (let i = 0; i < segments; i++)

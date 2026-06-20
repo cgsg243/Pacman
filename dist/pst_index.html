@@ -1,32 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman Multiplayer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #1a1a2e;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+        #login-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            flex-direction: column;
+        }
+        #login-screen h1 {
+            color: #FFD700;
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        #login-screen .subtitle {
+            color: #888;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        #login-screen input {
+            padding: 12px 20px;
+            font-size: 18px;
+            border: 2px solid #0f3460;
+            border-radius: 25px;
+            background: #16213e;
+            color: #fff;
+            width: 300px;
+            text-align: center;
+        }
+        #login-screen input:focus {
+            outline: none;
+            border-color: #FFD700;
+        }
+        #login-screen button {
+            margin-top: 15px;
+            padding: 12px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            background: #FFD700;
+            color: #1a1a2e;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        #login-screen button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+        #nickname-error {
+            color: #ff4444;
+            margin-top: 10px;
+            display: none;
+        }
+        #game-over {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff4444;
+            font-size: 48px;
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            display: none;
+            z-index: 100;
+            text-align: center;
+        }
+        #game-over .sub {
+            font-size: 20px;
+            color: #888;
+            margin-top: 10px;
+        }
+        #restart {
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            padding: 15px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 25px;
+            background: #FFD700;
+            color: #1a1a2e;
+            font-weight: bold;
+            cursor: pointer;
+            display: none;
+            z-index: 100;
+            transition: all 0.3s;
+        }
+        #restart:hover {
+            transform: translate(-50%, 0) scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+        #game {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-   <canvas id="game"></canvas>
-   <canvas id="spamton"></canvas>
-   <script src="pst_main.js"> </script>
-   <div id="gameover" style="
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 0, 0);
-    font: 60px monospace;
-    display: none;
-    pointer-events: none;
-    z-index: 10;">
-    GAME OVER
+    <div id="login-screen">
+        <h1>🟡 PACMAN</h1>
+        <p class="subtitle">Введите никнейм для игры</p>
+        <input type="text" id="nickname-input" placeholder="Ваш никнейм..." maxlength="15">
+        <button id="start-game-btn">Начать игру</button>
+        <p id="nickname-error">⚠️ Пожалуйста, введите никнейм</p>
     </div>
-    <div id="restart" style="
-    position: fixed;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(197, 164, 14);
-    font: 30px monospace;
-    display: none;
-    pointer-events: none;
-    z-index: 10;">RESTART?</div>
+
+    <div id="game-over">
+        💀 GAME OVER
+        <div class="sub">Нажмите кнопку ниже</div>
+    </div>
+    <button id="restart">🔄 Рестарт</button>
+
+    <canvas id="game"></canvas>
+
+    <script type="module" src="pst_main.js"></script>
 </body>
 </html>

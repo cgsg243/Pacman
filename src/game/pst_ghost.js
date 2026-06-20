@@ -63,6 +63,7 @@ export class Pst_Ghost
 
             const nx = this.tileX + this.dirX;
             const ny = this.tileY + this.dirY;
+
             if (!this.maze.isWall(nx, ny) && (this.dirX !== 0 || this.dirY !== 0))
             {
                 this.progress += dt * this.speed;
@@ -71,6 +72,7 @@ export class Pst_Ghost
         else
         {
             this.progress += dt * this.speed;
+            
             if (this.progress >= 1)
             {
                 this.progress = 0;
@@ -115,7 +117,8 @@ export class Pst_Ghost
             }
         }
 
-        if (dist[gy][gx] === -1) return null;
+        if (dist[gy][gx] === -1)
+          return null;
 
         const path = [];
         let x = gx, y = gy;
@@ -126,6 +129,7 @@ export class Pst_Ghost
             for (const [dx, dy] of [[0,1],[0,-1],[1,0],[-1,0]])
             {
                 const nx = x + dx, ny = y + dy;
+
                 if (nx >= 0 && nx < w && ny >= 0 && ny < h && dist[ny][nx] === dist[y][x] - 1)
                 {
                     x = nx;
@@ -141,6 +145,7 @@ export class Pst_Ghost
     getPosition()
     {
         const ts = this.maze.tileSize;
+
         return {
             x: (this.tileX + this.dirX * this.progress + 0.5) * ts,
             y: (this.tileY + this.dirY * this.progress + 0.5) * ts,
@@ -149,7 +154,8 @@ export class Pst_Ghost
 
     getAngle()
     {
-        if (this.dirX === 1) return 0;
+        if (this.dirX === 1)
+           return 0;
         if (this.dirX === -1) return Math.PI;
         if (this.dirY === 1) return Math.PI / 2;
         if (this.dirY === -1) return -Math.PI / 2;

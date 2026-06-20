@@ -3,7 +3,8 @@ export class Pst_Maze
     constructor()
     {
         this.tileSize = 1;
-        this.grid = [
+        this.grid =
+        [
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
             [1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,1],
             [1,2,1,1,1,2,1,1,1,1,1,2,1,1,2,1,1,2,1,1,1,1,1,2,1,1,1,2,2,1],
@@ -34,7 +35,8 @@ export class Pst_Maze
     {
         if (y < 0 || y >= this.grid.length)
           return true;
-        if (x < 0 || x >= this.grid[0].length) return true;
+        if (x < 0 || x >= this.grid[0].length)
+          return true;
         return this.grid[y][x] === 1;
     }
 
@@ -42,8 +44,10 @@ export class Pst_Maze
 
     isCoin(x, y)
     {
-        if (y < 0 || y >= this.grid.length) return false;
-        if (x < 0 || x >= this.grid[0].length) return false;
+        if (y < 0 || y >= this.grid.length)
+          return false;
+        if (x < 0 || x >= this.grid[0].length)
+          return false;
         return this.grid[y][x] === 2;
     }
 
@@ -70,16 +74,19 @@ export class Pst_Maze
 
     isOut(x, y)
     {
-        return x < 0 || x >= this.width || y < 0 || y >= this.height;
+       return x < 0 || x >= this.width || y < 0 || y >= this.height;
     }
 
     getCountMoney()
     {
         let g = 0;
-        for (let y = 0; y < this.height; y++) {
+
+        for (let y = 0; y < this.height; y++)
+        {
             for (let x = 0; x < this.width; x++)
             {
-                if (this.grid[y][x] === 2) g++;
+                if (this.grid[y][x] === 2)
+                  g++;
             }
         }
         return g;

@@ -16,6 +16,8 @@ export class Pst_Pacman
         this.mouthOpen = 0;
         this.mouthDir = 1;
         this.onEatCoin = null;
+        this.prevTileX = tileX;
+        this.prevTileY = tileY;
     }
 
     setDirection(dx, dy)
@@ -30,34 +32,33 @@ export class Pst_Pacman
         if (this.mouthOpen > 0.4) { this.mouthOpen = 0.4; this.mouthDir = -1; }
         if (this.mouthOpen < 0.0) { this.mouthOpen = 0.0; this.mouthDir = 1; }
 
-        if (this.progress === 0)
+        if (this.dirX !== 0 || this.dirY !== 0)
         {
-            if (this.nextDirX !== 0 || this.nextDirY !== 0)
+            if (this.progress < 0.1 && (this.nextDirX !== 0 || this.nextDirY !== 0))
             {
                 const nx = this.tileX + this.nextDirX;
                 const ny = this.tileY + this.nextDirY;
                 if (!this.maze.isWall(nx, ny))
                 {
+                    this.prevTileX = this.tileX;
+                    this.prevTileY = this.tileY;
+                    
                     this.dirX = this.nextDirX;
                     this.dirY = this.nextDirY;
                     this.nextDirX = 0;
                     this.nextDirY = 0;
+                    
+                    this.progress = this.progress;
                 }
             }
-
-            const nx = this.tileX + this.dirX;
-            const ny = this.tileY + this.dirY;
-            if (!this.maze.isWall(nx, ny) && (this.dirX !== 0 || this.dirY !== 0))
+            
+            this.progress += dt * this.speed * 0.9;
+            
+            if (this.progress >= 0.35)
             {
-                this.progress += dt * this.speed;
-            }
-        }
-        else
-        {
-            this.progress += dt * this.speed * 0.4;
-            if (this.progress > 0.7)
-            {
-                this.progress = 0;
+                this.prevTileX = this.tileX;
+                this.prevTileY = this.tileY;
+                
                 this.tileX += this.dirX;
                 this.tileY += this.dirY;
                 
@@ -75,15 +76,41 @@ export class Pst_Pacman
                     if (this.onEatCoin)
                       this.onEatCoin();
                 }
+                this.progress -= 0.45;
+                
+                const nextX = this.tileX + this.dirX;
+                const nextY = this.tileY + this.dirY;
+                
+                if (this.maze.isWall(nextX, nextY))
+                {
+                    this.progress = 0;
+                    this.dirX = 0;
+                    this.dirY = 0;
+                }
+            }
+        }
+        else if (this.nextDirX !== 0 || this.nextDirY !== 0)
+        {
+            const nx = this.tileX + this.nextDirX;
+            const ny = this.tileY + this.nextDirY;
+            if (!this.maze.isWall(nx, ny))
+            {
+                this.dirX = this.nextDirX;
+                this.dirY = this.nextDirY;
+                this.nextDirX = 0;
+                this.nextDirY = 0;
+                this.progress = 0;
+                this.prevTileX = this.tileX;
+                this.prevTileY = this.tileY;
             }
         }
     }
 
     getPosition()
     {
-        return  {
-            x: this.tileX + this.dirX * this.progress,
-            y: this.tileY + this.dirY * this.progress
+        return {
+            x: this.prevTileX + (this.tileX - this.prevTileX) * this.progress + this.dirX * this.progress,
+            y: this.prevTileY + (this.tileY - this.prevTileY) * this.progress + this.dirY * this.progress
         };
     }
 

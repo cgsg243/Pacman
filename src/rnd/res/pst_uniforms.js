@@ -1,7 +1,8 @@
 export function pst_createUniforms(device)
 {
-    const buffer = device.createBuffer({
-        size: 64, // 1 матрица
+    const buffer = device.createBuffer(
+    {
+        size: 64,
         usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
     });
 
@@ -18,7 +19,7 @@ export function pst_createUniforms(device)
         ],
     });
 
-    const data = new Float32Array(16); // только model
+    const data = new Float32Array(16);
 
     return { buffer, layout, group, data };
 }
