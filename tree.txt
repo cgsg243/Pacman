@@ -1,0 +1,2529 @@
+Folder PATH listing for volume DATA
+Volume serial number is 9C0A-2748
+Z:.
+|   .gitignore
+|   package-lock.json
+|   package.json
+|   rollup.config.js
+|   server.js
+|   tree.txt
+|   
++---.vscode
+|       launch.json
+|       settings.json
+|       
++---dist
+|   |   all_ghosts.html
+|   |   cherry.png
+|   |   pst_index.html
+|   |   pst_main.js
+|   |   
+|   +---all_ghosts
+|   |   |   all_ghosts.png
+|   |   |   
+|   |   +---angry_blinky
+|   |   |       frame_0.png
+|   |   |       frame_1.png
+|   |   |       frame_2.png
+|   |   |       frame_3.png
+|   |   |       frame_4.png
+|   |   |       frame_5.png
+|   |   |       frame_6.png
+|   |   |       frame_7.png
+|   |   |       
+|   |   +---blue_ghost
+|   |   |       frame_0.png
+|   |   |       frame_1.png
+|   |   |       frame_2.png
+|   |   |       frame_3.png
+|   |   |       frame_4.png
+|   |   |       frame_5.png
+|   |   |       frame_6.png
+|   |   |       frame_7.png
+|   |   |       
+|   |   +---fantom
+|   |   |       frame_0.png
+|   |   |       frame_1.png
+|   |   |       frame_2.png
+|   |   |       frame_3.png
+|   |   |       frame_4.png
+|   |   |       frame_5.png
+|   |   |       frame_6.png
+|   |   |       frame_7.png
+|   |   |       
+|   |   +---ghost_Scream
+|   |   |   +---normal
+|   |   |   |       frame_0.png
+|   |   |   |       frame_1.png
+|   |   |   |       frame_2.png
+|   |   |   |       frame_3.png
+|   |   |   |       frame_4.png
+|   |   |   |       
+|   |   |   \---scream
+|   |   |           frame_0.png
+|   |   |           frame_1.png
+|   |   |           frame_2.png
+|   |   |           frame_3.png
+|   |   |           frame_4.png
+|   |   |           frame_5.png
+|   |   |           frame_6.png
+|   |   |           frame_7.png
+|   |   |           
+|   |   +---orange_ghost
+|   |   |       frame_0.png
+|   |   |       frame_1.png
+|   |   |       frame_2.png
+|   |   |       frame_3.png
+|   |   |       frame_4.png
+|   |   |       frame_5.png
+|   |   |       frame_6.png
+|   |   |       frame_7.png
+|   |   |       
+|   |   +---pink_ghost
+|   |   |       frame_0.png
+|   |   |       frame_1.png
+|   |   |       frame_2.png
+|   |   |       frame_3.png
+|   |   |       frame_4.png
+|   |   |       frame_5.png
+|   |   |       frame_6.png
+|   |   |       frame_7.png
+|   |   |       
+|   |   \---red_ghost
+|   |           frame_0.png
+|   |           frame_1.png
+|   |           frame_2.png
+|   |           frame_3.png
+|   |           frame_4.png
+|   |           frame_5.png
+|   |           frame_6.png
+|   |           frame_7.png
+|   |           
+|   +---angry_blinky
+|   |       frame_0.png
+|   |       frame_1.png
+|   |       frame_2.png
+|   |       frame_3.png
+|   |       frame_4.png
+|   |       frame_5.png
+|   |       frame_6.png
+|   |       frame_7.png
+|   |       
+|   +---blue_ghost
+|   |       frame_0.png
+|   |       frame_1.png
+|   |       frame_2.png
+|   |       frame_3.png
+|   |       frame_4.png
+|   |       frame_5.png
+|   |       frame_6.png
+|   |       frame_7.png
+|   |       
+|   +---fantom
+|   |       frame_0.png
+|   |       frame_1.png
+|   |       frame_2.png
+|   |       frame_3.png
+|   |       frame_4.png
+|   |       frame_5.png
+|   |       frame_6.png
+|   |       frame_7.png
+|   |       
+|   +---ghost_Scream
+|   |   +---normal
+|   |   |       frame_0.png
+|   |   |       frame_1.png
+|   |   |       frame_2.png
+|   |   |       frame_3.png
+|   |   |       frame_4.png
+|   |   |       
+|   |   \---scream
+|   |           frame_0.png
+|   |           frame_1.png
+|   |           frame_2.png
+|   |           frame_3.png
+|   |           frame_4.png
+|   |           frame_5.png
+|   |           frame_6.png
+|   |           frame_7.png
+|   |           
+|   +---orange_ghost
+|   |       frame_0.png
+|   |       frame_1.png
+|   |       frame_2.png
+|   |       frame_3.png
+|   |       frame_4.png
+|   |       frame_5.png
+|   |       frame_6.png
+|   |       frame_7.png
+|   |       
+|   +---pacman
+|   |   |   frame_0.png
+|   |   |   frame_1.png
+|   |   |   frame_10.png
+|   |   |   frame_11.png
+|   |   |   frame_2.png
+|   |   |   frame_3.png
+|   |   |   frame_4.png
+|   |   |   frame_5.png
+|   |   |   frame_6.png
+|   |   |   frame_7.png
+|   |   |   frame_8.png
+|   |   |   frame_9.png
+|   |   |   
+|   |   \---death
+|   |           frame_0.png
+|   |           frame_1.png
+|   |           frame_10.png
+|   |           frame_2.png
+|   |           frame_3.png
+|   |           frame_4.png
+|   |           frame_5.png
+|   |           frame_6.png
+|   |           frame_7.png
+|   |           frame_8.png
+|   |           frame_9.png
+|   |           
+|   +---pink_ghost
+|   |       frame_0.png
+|   |       frame_1.png
+|   |       frame_2.png
+|   |       frame_3.png
+|   |       frame_4.png
+|   |       frame_5.png
+|   |       frame_6.png
+|   |       frame_7.png
+|   |       
+|   +---red_ghost
+|   |       frame_0.png
+|   |       frame_1.png
+|   |       frame_2.png
+|   |       frame_3.png
+|   |       frame_4.png
+|   |       frame_5.png
+|   |       frame_6.png
+|   |       frame_7.png
+|   |       
+|   +---targets
+|   |   |   apple.png
+|   |   |   bell.png
+|   |   |   boss.png
+|   |   |   cherry.png
+|   |   |   coin.png
+|   |   |   key.png
+|   |   |   melon.png
+|   |   |   orange.png
+|   |   |   pill.png
+|   |   |   strawberry.png
+|   |   |   
+|   |   \---coin
+|   |           frame_0.png
+|   |           frame_1.png
+|   |           frame_2.png
+|   |           frame_3.png
+|   |           frame_4.png
+|   |           frame_5.png
+|   |           frame_6.png
+|   |           frame_7.png
+|   |           frame_8.png
+|   |           
+|   \---ui
+|           0.png
+|           1.png
+|           100.png
+|           1000.png
+|           1600.png
+|           1up.png
+|           2.png
+|           200.png
+|           2000.png
+|           3.png
+|           300.png
+|           3000.png
+|           4.png
+|           400.png
+|           5.png
+|           500.png
+|           5000.png
+|           6.png
+|           7.png
+|           700.png
+|           8.png
+|           800.png
+|           9.png
+|           gameover.png
+|           help.png
+|           life.png
+|           pause.png
+|           pause_alt.png
+|           quit.png
+|           ready.png
+|           score.png
+|           
++---node_modules
+|   |   .package-lock.json
+|   |   
+|   +---.bin
+|   |       acorn
+|   |       acorn.cmd
+|   |       acorn.ps1
+|   |       resolve
+|   |       resolve.cmd
+|   |       resolve.ps1
+|   |       rollup
+|   |       rollup.cmd
+|   |       rollup.ps1
+|   |       terser
+|   |       terser.cmd
+|   |       terser.ps1
+|   |       
+|   +---@airbnb
+|   +---@audio
+|   |   +---decode-aac
+|   |   |   |   decode-aac.d.ts
+|   |   |   |   decode-aac.js
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   \---src
+|   |   |           aac.wasm.cjs
+|   |   |           
+|   |   +---decode-aiff
+|   |   |       decode-aiff.d.ts
+|   |   |       decode-aiff.js
+|   |   |       LICENSE
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       
+|   |   +---decode-amr
+|   |   |   |   decode-amr.d.ts
+|   |   |   |   decode-amr.js
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   \---src
+|   |   |           amr.wasm.cjs
+|   |   |           
+|   |   +---decode-caf
+|   |   |       decode-caf.d.ts
+|   |   |       decode-caf.js
+|   |   |       LICENSE
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       
+|   |   +---decode-flac
+|   |   |       decode-flac.d.ts
+|   |   |       decode-flac.js
+|   |   |       LICENSE
+|   |   |       meta.js
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       
+|   |   +---decode-mp3
+|   |   |       decode-mp3.d.ts
+|   |   |       decode-mp3.js
+|   |   |       LICENSE
+|   |   |       meta.js
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       
+|   |   +---decode-opus
+|   |   |       decode-opus.d.ts
+|   |   |       decode-opus.js
+|   |   |       LICENSE
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       
+|   |   +---decode-qoa
+|   |   |       decode-qoa.d.ts
+|   |   |       decode-qoa.js
+|   |   |       LICENSE
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       
+|   |   +---decode-vorbis
+|   |   |       decode-vorbis.d.ts
+|   |   |       decode-vorbis.js
+|   |   |       LICENSE
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       
+|   |   +---decode-wav
+|   |   |       decode-wav.js
+|   |   |       meta.js
+|   |   |       package.json
+|   |   |       
+|   |   +---decode-webm
+|   |   |       decode-webm.d.ts
+|   |   |       decode-webm.js
+|   |   |       LICENSE
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       
+|   |   +---decode-wma
+|   |   |   |   decode-wma.d.ts
+|   |   |   |   decode-wma.js
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   \---src
+|   |   |           wma.wasm.cjs
+|   |   |           
+|   |   \---speaker-win32-x64
+|   |           package.json
+|   |           README.md
+|   |           speaker.node
+|   |           
+|   +---@babel
+|   |   \---runtime
+|   |       |   LICENSE
+|   |       |   package.json
+|   |       |   README.md
+|   |       |   
+|   |       +---helpers
+|   |       |   |   applyDecoratedDescriptor.js
+|   |       |   |   applyDecs.js
+|   |       |   |   applyDecs2203.js
+|   |       |   |   applyDecs2203R.js
+|   |       |   |   applyDecs2301.js
+|   |       |   |   applyDecs2305.js
+|   |       |   |   applyDecs2311.js
+|   |       |   |   arrayLikeToArray.js
+|   |       |   |   arrayWithHoles.js
+|   |       |   |   arrayWithoutHoles.js
+|   |       |   |   assertClassBrand.js
+|   |       |   |   assertThisInitialized.js
+|   |       |   |   asyncGeneratorDelegate.js
+|   |       |   |   asyncIterator.js
+|   |       |   |   asyncToGenerator.js
+|   |       |   |   awaitAsyncGenerator.js
+|   |       |   |   AwaitValue.js
+|   |       |   |   callSuper.js
+|   |       |   |   checkInRHS.js
+|   |       |   |   checkPrivateRedeclaration.js
+|   |       |   |   classApplyDescriptorDestructureSet.js
+|   |       |   |   classApplyDescriptorGet.js
+|   |       |   |   classApplyDescriptorSet.js
+|   |       |   |   classCallCheck.js
+|   |       |   |   classCheckPrivateStaticAccess.js
+|   |       |   |   classCheckPrivateStaticFieldDescriptor.js
+|   |       |   |   classExtractFieldDescriptor.js
+|   |       |   |   classNameTDZError.js
+|   |       |   |   classPrivateFieldDestructureSet.js
+|   |       |   |   classPrivateFieldGet.js
+|   |       |   |   classPrivateFieldGet2.js
+|   |       |   |   classPrivateFieldInitSpec.js
+|   |       |   |   classPrivateFieldLooseBase.js
+|   |       |   |   classPrivateFieldLooseKey.js
+|   |       |   |   classPrivateFieldSet.js
+|   |       |   |   classPrivateFieldSet2.js
+|   |       |   |   classPrivateGetter.js
+|   |       |   |   classPrivateMethodGet.js
+|   |       |   |   classPrivateMethodInitSpec.js
+|   |       |   |   classPrivateMethodSet.js
+|   |       |   |   classPrivateSetter.js
+|   |       |   |   classStaticPrivateFieldDestructureSet.js
+|   |       |   |   classStaticPrivateFieldSpecGet.js
+|   |       |   |   classStaticPrivateFieldSpecSet.js
+|   |       |   |   classStaticPrivateMethodGet.js
+|   |       |   |   classStaticPrivateMethodSet.js
+|   |       |   |   construct.js
+|   |       |   |   createClass.js
+|   |       |   |   createForOfIteratorHelper.js
+|   |       |   |   createForOfIteratorHelperLoose.js
+|   |       |   |   createSuper.js
+|   |       |   |   decorate.js
+|   |       |   |   defaults.js
+|   |       |   |   defineAccessor.js
+|   |       |   |   defineEnumerableProperties.js
+|   |       |   |   defineProperty.js
+|   |       |   |   dispose.js
+|   |       |   |   extends.js
+|   |       |   |   get.js
+|   |       |   |   getPrototypeOf.js
+|   |       |   |   identity.js
+|   |       |   |   importDeferProxy.js
+|   |       |   |   inherits.js
+|   |       |   |   inheritsLoose.js
+|   |       |   |   initializerDefineProperty.js
+|   |       |   |   initializerWarningHelper.js
+|   |       |   |   instanceof.js
+|   |       |   |   interopRequireDefault.js
+|   |       |   |   interopRequireWildcard.js
+|   |       |   |   isNativeFunction.js
+|   |       |   |   isNativeReflectConstruct.js
+|   |       |   |   iterableToArray.js
+|   |       |   |   iterableToArrayLimit.js
+|   |       |   |   jsx.js
+|   |       |   |   maybeArrayLike.js
+|   |       |   |   newArrowCheck.js
+|   |       |   |   nonIterableRest.js
+|   |       |   |   nonIterableSpread.js
+|   |       |   |   nullishReceiverError.js
+|   |       |   |   objectDestructuringEmpty.js
+|   |       |   |   objectSpread.js
+|   |       |   |   objectSpread2.js
+|   |       |   |   objectWithoutProperties.js
+|   |       |   |   objectWithoutPropertiesLoose.js
+|   |       |   |   OverloadYield.js
+|   |       |   |   possibleConstructorReturn.js
+|   |       |   |   readOnlyError.js
+|   |       |   |   regenerator.js
+|   |       |   |   regeneratorAsync.js
+|   |       |   |   regeneratorAsyncGen.js
+|   |       |   |   regeneratorAsyncIterator.js
+|   |       |   |   regeneratorDefine.js
+|   |       |   |   regeneratorKeys.js
+|   |       |   |   regeneratorRuntime.js
+|   |       |   |   regeneratorValues.js
+|   |       |   |   set.js
+|   |       |   |   setFunctionName.js
+|   |       |   |   setPrototypeOf.js
+|   |       |   |   skipFirstGeneratorNext.js
+|   |       |   |   slicedToArray.js
+|   |       |   |   superPropBase.js
+|   |       |   |   superPropGet.js
+|   |       |   |   superPropSet.js
+|   |       |   |   taggedTemplateLiteral.js
+|   |       |   |   taggedTemplateLiteralLoose.js
+|   |       |   |   tdz.js
+|   |       |   |   temporalRef.js
+|   |       |   |   temporalUndefined.js
+|   |       |   |   toArray.js
+|   |       |   |   toConsumableArray.js
+|   |       |   |   toPrimitive.js
+|   |       |   |   toPropertyKey.js
+|   |       |   |   toSetter.js
+|   |       |   |   tsRewriteRelativeImportExtensions.js
+|   |       |   |   typeof.js
+|   |       |   |   unsupportedIterableToArray.js
+|   |       |   |   using.js
+|   |       |   |   usingCtx.js
+|   |       |   |   wrapAsyncGenerator.js
+|   |       |   |   wrapNativeSuper.js
+|   |       |   |   wrapRegExp.js
+|   |       |   |   writeOnlyError.js
+|   |       |   |   
+|   |       |   \---esm
+|   |       |           applyDecoratedDescriptor.js
+|   |       |           applyDecs.js
+|   |       |           applyDecs2203.js
+|   |       |           applyDecs2203R.js
+|   |       |           applyDecs2301.js
+|   |       |           applyDecs2305.js
+|   |       |           applyDecs2311.js
+|   |       |           arrayLikeToArray.js
+|   |       |           arrayWithHoles.js
+|   |       |           arrayWithoutHoles.js
+|   |       |           assertClassBrand.js
+|   |       |           assertThisInitialized.js
+|   |       |           asyncGeneratorDelegate.js
+|   |       |           asyncIterator.js
+|   |       |           asyncToGenerator.js
+|   |       |           awaitAsyncGenerator.js
+|   |       |           AwaitValue.js
+|   |       |           callSuper.js
+|   |       |           checkInRHS.js
+|   |       |           checkPrivateRedeclaration.js
+|   |       |           classApplyDescriptorDestructureSet.js
+|   |       |           classApplyDescriptorGet.js
+|   |       |           classApplyDescriptorSet.js
+|   |       |           classCallCheck.js
+|   |       |           classCheckPrivateStaticAccess.js
+|   |       |           classCheckPrivateStaticFieldDescriptor.js
+|   |       |           classExtractFieldDescriptor.js
+|   |       |           classNameTDZError.js
+|   |       |           classPrivateFieldDestructureSet.js
+|   |       |           classPrivateFieldGet.js
+|   |       |           classPrivateFieldGet2.js
+|   |       |           classPrivateFieldInitSpec.js
+|   |       |           classPrivateFieldLooseBase.js
+|   |       |           classPrivateFieldLooseKey.js
+|   |       |           classPrivateFieldSet.js
+|   |       |           classPrivateFieldSet2.js
+|   |       |           classPrivateGetter.js
+|   |       |           classPrivateMethodGet.js
+|   |       |           classPrivateMethodInitSpec.js
+|   |       |           classPrivateMethodSet.js
+|   |       |           classPrivateSetter.js
+|   |       |           classStaticPrivateFieldDestructureSet.js
+|   |       |           classStaticPrivateFieldSpecGet.js
+|   |       |           classStaticPrivateFieldSpecSet.js
+|   |       |           classStaticPrivateMethodGet.js
+|   |       |           classStaticPrivateMethodSet.js
+|   |       |           construct.js
+|   |       |           createClass.js
+|   |       |           createForOfIteratorHelper.js
+|   |       |           createForOfIteratorHelperLoose.js
+|   |       |           createSuper.js
+|   |       |           decorate.js
+|   |       |           defaults.js
+|   |       |           defineAccessor.js
+|   |       |           defineEnumerableProperties.js
+|   |       |           defineProperty.js
+|   |       |           dispose.js
+|   |       |           extends.js
+|   |       |           get.js
+|   |       |           getPrototypeOf.js
+|   |       |           identity.js
+|   |       |           importDeferProxy.js
+|   |       |           inherits.js
+|   |       |           inheritsLoose.js
+|   |       |           initializerDefineProperty.js
+|   |       |           initializerWarningHelper.js
+|   |       |           instanceof.js
+|   |       |           interopRequireDefault.js
+|   |       |           interopRequireWildcard.js
+|   |       |           isNativeFunction.js
+|   |       |           isNativeReflectConstruct.js
+|   |       |           iterableToArray.js
+|   |       |           iterableToArrayLimit.js
+|   |       |           jsx.js
+|   |       |           maybeArrayLike.js
+|   |       |           newArrowCheck.js
+|   |       |           nonIterableRest.js
+|   |       |           nonIterableSpread.js
+|   |       |           nullishReceiverError.js
+|   |       |           objectDestructuringEmpty.js
+|   |       |           objectSpread.js
+|   |       |           objectSpread2.js
+|   |       |           objectWithoutProperties.js
+|   |       |           objectWithoutPropertiesLoose.js
+|   |       |           OverloadYield.js
+|   |       |           package.json
+|   |       |           possibleConstructorReturn.js
+|   |       |           readOnlyError.js
+|   |       |           regenerator.js
+|   |       |           regeneratorAsync.js
+|   |       |           regeneratorAsyncGen.js
+|   |       |           regeneratorAsyncIterator.js
+|   |       |           regeneratorDefine.js
+|   |       |           regeneratorKeys.js
+|   |       |           regeneratorRuntime.js
+|   |       |           regeneratorValues.js
+|   |       |           set.js
+|   |       |           setFunctionName.js
+|   |       |           setPrototypeOf.js
+|   |       |           skipFirstGeneratorNext.js
+|   |       |           slicedToArray.js
+|   |       |           superPropBase.js
+|   |       |           superPropGet.js
+|   |       |           superPropSet.js
+|   |       |           taggedTemplateLiteral.js
+|   |       |           taggedTemplateLiteralLoose.js
+|   |       |           tdz.js
+|   |       |           temporalRef.js
+|   |       |           temporalUndefined.js
+|   |       |           toArray.js
+|   |       |           toConsumableArray.js
+|   |       |           toPrimitive.js
+|   |       |           toPropertyKey.js
+|   |       |           toSetter.js
+|   |       |           tsRewriteRelativeImportExtensions.js
+|   |       |           typeof.js
+|   |       |           unsupportedIterableToArray.js
+|   |       |           using.js
+|   |       |           usingCtx.js
+|   |       |           wrapAsyncGenerator.js
+|   |       |           wrapNativeSuper.js
+|   |       |           wrapRegExp.js
+|   |       |           writeOnlyError.js
+|   |       |           
+|   |       \---regenerator
+|   |               index.js
+|   |               
+|   +---@eshaz
+|   |   \---web-worker
+|   |       |   browser.js
+|   |       |   index.d.ts
+|   |       |   LICENSE
+|   |       |   node.js
+|   |       |   package.json
+|   |       |   README.md
+|   |       |   
+|   |       \---cjs
+|   |               browser.js
+|   |               node.js
+|   |               
+|   +---@jridgewell
+|   |   +---gen-mapping
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |   |   gen-mapping.mjs
+|   |   |   |   |   gen-mapping.mjs.map
+|   |   |   |   |   gen-mapping.umd.js
+|   |   |   |   |   gen-mapping.umd.js.map
+|   |   |   |   |   
+|   |   |   |   \---types
+|   |   |   |           gen-mapping.d.ts
+|   |   |   |           set-array.d.ts
+|   |   |   |           sourcemap-segment.d.ts
+|   |   |   |           types.d.ts
+|   |   |   |           
+|   |   |   +---src
+|   |   |   |       gen-mapping.ts
+|   |   |   |       set-array.ts
+|   |   |   |       sourcemap-segment.ts
+|   |   |   |       types.ts
+|   |   |   |       
+|   |   |   \---types
+|   |   |           gen-mapping.d.cts
+|   |   |           gen-mapping.d.cts.map
+|   |   |           gen-mapping.d.mts
+|   |   |           gen-mapping.d.mts.map
+|   |   |           set-array.d.cts
+|   |   |           set-array.d.cts.map
+|   |   |           set-array.d.mts
+|   |   |           set-array.d.mts.map
+|   |   |           sourcemap-segment.d.cts
+|   |   |           sourcemap-segment.d.cts.map
+|   |   |           sourcemap-segment.d.mts
+|   |   |           sourcemap-segment.d.mts.map
+|   |   |           types.d.cts
+|   |   |           types.d.cts.map
+|   |   |           types.d.mts
+|   |   |           types.d.mts.map
+|   |   |           
+|   |   +---resolve-uri
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   \---dist
+|   |   |       |   resolve-uri.mjs
+|   |   |       |   resolve-uri.mjs.map
+|   |   |       |   resolve-uri.umd.js
+|   |   |       |   resolve-uri.umd.js.map
+|   |   |       |   
+|   |   |       \---types
+|   |   |               resolve-uri.d.ts
+|   |   |               
+|   |   +---source-map
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |       source-map.mjs
+|   |   |   |       source-map.mjs.map
+|   |   |   |       source-map.umd.js
+|   |   |   |       source-map.umd.js.map
+|   |   |   |       
+|   |   |   +---src
+|   |   |   |       source-map.ts
+|   |   |   |       
+|   |   |   \---types
+|   |   |           source-map.d.cts
+|   |   |           source-map.d.cts.map
+|   |   |           source-map.d.mts
+|   |   |           source-map.d.mts.map
+|   |   |           
+|   |   +---sourcemap-codec
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |       sourcemap-codec.mjs
+|   |   |   |       sourcemap-codec.mjs.map
+|   |   |   |       sourcemap-codec.umd.js
+|   |   |   |       sourcemap-codec.umd.js.map
+|   |   |   |       
+|   |   |   +---src
+|   |   |   |       scopes.ts
+|   |   |   |       sourcemap-codec.ts
+|   |   |   |       strings.ts
+|   |   |   |       vlq.ts
+|   |   |   |       
+|   |   |   \---types
+|   |   |           scopes.d.cts
+|   |   |           scopes.d.cts.map
+|   |   |           scopes.d.mts
+|   |   |           scopes.d.mts.map
+|   |   |           sourcemap-codec.d.cts
+|   |   |           sourcemap-codec.d.cts.map
+|   |   |           sourcemap-codec.d.mts
+|   |   |           sourcemap-codec.d.mts.map
+|   |   |           strings.d.cts
+|   |   |           strings.d.cts.map
+|   |   |           strings.d.mts
+|   |   |           strings.d.mts.map
+|   |   |           vlq.d.cts
+|   |   |           vlq.d.cts.map
+|   |   |           vlq.d.mts
+|   |   |           vlq.d.mts.map
+|   |   |           
+|   |   \---trace-mapping
+|   |       |   LICENSE
+|   |       |   package.json
+|   |       |   README.md
+|   |       |   
+|   |       +---dist
+|   |       |       trace-mapping.mjs
+|   |       |       trace-mapping.mjs.map
+|   |       |       trace-mapping.umd.js
+|   |       |       trace-mapping.umd.js.map
+|   |       |       
+|   |       +---src
+|   |       |       binary-search.ts
+|   |       |       by-source.ts
+|   |       |       flatten-map.ts
+|   |       |       resolve.ts
+|   |       |       sort.ts
+|   |       |       sourcemap-segment.ts
+|   |       |       strip-filename.ts
+|   |       |       trace-mapping.ts
+|   |       |       types.ts
+|   |       |       
+|   |       \---types
+|   |               binary-search.d.cts
+|   |               binary-search.d.cts.map
+|   |               binary-search.d.mts
+|   |               binary-search.d.mts.map
+|   |               by-source.d.cts
+|   |               by-source.d.cts.map
+|   |               by-source.d.mts
+|   |               by-source.d.mts.map
+|   |               flatten-map.d.cts
+|   |               flatten-map.d.cts.map
+|   |               flatten-map.d.mts
+|   |               flatten-map.d.mts.map
+|   |               resolve.d.cts
+|   |               resolve.d.cts.map
+|   |               resolve.d.mts
+|   |               resolve.d.mts.map
+|   |               sort.d.cts
+|   |               sort.d.cts.map
+|   |               sort.d.mts
+|   |               sort.d.mts.map
+|   |               sourcemap-segment.d.cts
+|   |               sourcemap-segment.d.cts.map
+|   |               sourcemap-segment.d.mts
+|   |               sourcemap-segment.d.mts.map
+|   |               strip-filename.d.cts
+|   |               strip-filename.d.cts.map
+|   |               strip-filename.d.mts
+|   |               strip-filename.d.mts.map
+|   |               trace-mapping.d.cts
+|   |               trace-mapping.d.cts.map
+|   |               trace-mapping.d.mts
+|   |               trace-mapping.d.mts.map
+|   |               types.d.cts
+|   |               types.d.cts.map
+|   |               types.d.mts
+|   |               types.d.mts.map
+|   |               
+|   +---@rollup
+|   |   +---plugin-commonjs
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |   +---cjs
+|   |   |   |   |       index.js
+|   |   |   |   |       
+|   |   |   |   \---es
+|   |   |   |           index.js
+|   |   |   |           package.json
+|   |   |   |           
+|   |   |   \---types
+|   |   |           index.d.ts
+|   |   |           
+|   |   +---plugin-json
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |   +---cjs
+|   |   |   |   |       index.js
+|   |   |   |   |       
+|   |   |   |   \---es
+|   |   |   |           index.js
+|   |   |   |           package.json
+|   |   |   |           
+|   |   |   \---types
+|   |   |           index.d.ts
+|   |   |           
+|   |   +---plugin-node-resolve
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |   +---cjs
+|   |   |   |   |       index.js
+|   |   |   |   |       
+|   |   |   |   \---es
+|   |   |   |           index.js
+|   |   |   |           package.json
+|   |   |   |           
+|   |   |   \---types
+|   |   |           index.d.ts
+|   |   |           
+|   |   +---plugin-terser
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |   +---cjs
+|   |   |   |   |       index.js
+|   |   |   |   |       
+|   |   |   |   \---es
+|   |   |   |           index.js
+|   |   |   |           package.json
+|   |   |   |           
+|   |   |   +---src
+|   |   |   |       constants.ts
+|   |   |   |       index.ts
+|   |   |   |       module.ts
+|   |   |   |       type.ts
+|   |   |   |       worker-pool.ts
+|   |   |   |       worker.ts
+|   |   |   |       
+|   |   |   \---types
+|   |   |           index.d.ts
+|   |   |           
+|   |   +---pluginutils
+|   |   |   |   LICENSE
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |   +---cjs
+|   |   |   |   |       index.js
+|   |   |   |   |       
+|   |   |   |   \---es
+|   |   |   |           index.js
+|   |   |   |           package.json
+|   |   |   |           
+|   |   |   \---types
+|   |   |           index.d.ts
+|   |   |           
+|   |   +---rollup-win32-x64-gnu
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       rollup.win32-x64-gnu.node
+|   |   |       
+|   |   \---rollup-win32-x64-msvc
+|   |           package.json
+|   |           README.md
+|   |           rollup.win32-x64-msvc.node
+|   |           
+|   +---@thi.ng
+|   |   +---bitstream
+|   |   |       index.d.ts
+|   |   |       index.js
+|   |   |       input.d.ts
+|   |   |       input.js
+|   |   |       LICENSE
+|   |   |       output.d.ts
+|   |   |       output.js
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       simple.d.ts
+|   |   |       simple.js
+|   |   |       
+|   |   \---errors
+|   |           assert.d.ts
+|   |           assert.js
+|   |           deferror.d.ts
+|   |           deferror.js
+|   |           ensure.d.ts
+|   |           ensure.js
+|   |           illegal-arguments.d.ts
+|   |           illegal-arguments.js
+|   |           illegal-arity.d.ts
+|   |           illegal-arity.js
+|   |           illegal-state.d.ts
+|   |           illegal-state.js
+|   |           index.d.ts
+|   |           index.js
+|   |           io.d.ts
+|   |           io.js
+|   |           LICENSE
+|   |           out-of-bounds.d.ts
+|   |           out-of-bounds.js
+|   |           package.json
+|   |           README.md
+|   |           unsupported.d.ts
+|   |           unsupported.js
+|   |           
+|   +---@types
+|   |   +---estree
+|   |   |       flow.d.ts
+|   |   |       index.d.ts
+|   |   |       LICENSE
+|   |   |       package.json
+|   |   |       README.md
+|   |   |       
+|   |   \---resolve
+|   |           index.d.ts
+|   |           LICENSE
+|   |           package.json
+|   |           README.md
+|   |           
+|   +---@wasm-audio-decoders
+|   |   +---common
+|   |   |   |   index.js
+|   |   |   |   package.json
+|   |   |   |   types.d.ts
+|   |   |   |   
+|   |   |   \---src
+|   |   |       |   utilities.js
+|   |   |       |   WASMAudioDecoderCommon.js
+|   |   |       |   WASMAudioDecoderWorker.js
+|   |   |       |   
+|   |   |       \---puff
+|   |   |               build_puff.js
+|   |   |               puff.c
+|   |   |               puff.h
+|   |   |               README
+|   |   |               
+|   |   +---flac
+|   |   |   |   index.js
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   types.d.ts
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |       flac-decoder.min.js
+|   |   |   |       flac-decoder.min.js.map
+|   |   |   |       
+|   |   |   \---src
+|   |   |           EmscriptenWasm.js
+|   |   |           FLACDecoder.js
+|   |   |           FLACDecoderWebWorker.js
+|   |   |           
+|   |   +---ogg-vorbis
+|   |   |   |   index.js
+|   |   |   |   package.json
+|   |   |   |   README.md
+|   |   |   |   types.d.ts
+|   |   |   |   
+|   |   |   +---dist
+|   |   |   |       ogg-vorbis-decoder.min.js
+|   |   |   |       ogg-vorbis-decoder.min.js.map
+|   |   |   |       
+|   |   |   \---src
+|   |   |           EmscriptenWasm.js
+|   |   |           OggVorbisDecoder.js
+|   |   |           OggVorbisDecoderWebWorker.js
+|   |   |           
+|   |   \---opus-ml
+|   |       |   index.js
+|   |       |   package.json
+|   |       |   README.md
+|   |       |   types.d.ts
+|   |       |   
+|   |       +---dist
+|   |       |       opus-ml-decoder.min.js
+|   |       |       opus-ml-decoder.min.js.map
+|   |       |       
+|   |       \---src
+|   |               EmscriptenWasm.js
+|   |               OpusMLDecoder.js
+|   |               OpusMLDecoderWebWorker.js
+|   |               
+|   +---acorn
+|   |   |   CHANGELOG.md
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   +---bin
+|   |   |       acorn
+|   |   |       
+|   |   \---dist
+|   |           acorn.d.mts
+|   |           acorn.d.ts
+|   |           acorn.js
+|   |           acorn.mjs
+|   |           bin.js
+|   |           
+|   +---audio-buffer
+|   |       index.js
+|   |       LICENSE
+|   |       package.json
+|   |       play.js
+|   |       readme.md
+|   |       util.js
+|   |       
+|   +---audio-decode
+|   |   |   .gitmodules
+|   |   |   audio-decode.d.ts
+|   |   |   audio-decode.js
+|   |   |   LICENSE
+|   |   |   meta.js
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   stream.d.ts
+|   |   |   stream.js
+|   |   |   test.html
+|   |   |   
+|   |   +---.claude
+|   |   |       settings.json
+|   |   |       
+|   |   \---.github
+|   |       \---workflows
+|   |               test.js.yml
+|   |               
+|   +---audio-effect
+|   |   |   index.js
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   +---delay
+|   |   |       delay.js
+|   |   |       index.js
+|   |   |       multitap.js
+|   |   |       ping-pong.js
+|   |   |       reverb.js
+|   |   |       
+|   |   +---distortion
+|   |   |       bitcrusher.js
+|   |   |       distortion.js
+|   |   |       index.js
+|   |   |       
+|   |   +---dynamics
+|   |   |       compressor.js
+|   |   |       envelope.js
+|   |   |       expander.js
+|   |   |       gate.js
+|   |   |       index.js
+|   |   |       limiter.js
+|   |   |       transient-shaper.js
+|   |   |       
+|   |   +---modulation
+|   |   |       auto-wah.js
+|   |   |       chorus.js
+|   |   |       flanger.js
+|   |   |       index.js
+|   |   |       phaser.js
+|   |   |       pitch-shifter.js
+|   |   |       ring-mod.js
+|   |   |       tremolo.js
+|   |   |       vibrato.js
+|   |   |       wah.js
+|   |   |       
+|   |   +---plot
+|   |   |       auto-wah.svg
+|   |   |       bitcrusher.svg
+|   |   |       chorus.svg
+|   |   |       compressor.svg
+|   |   |       delay.svg
+|   |   |       distortion.svg
+|   |   |       envelope.svg
+|   |   |       expander.svg
+|   |   |       flanger.svg
+|   |   |       gain.svg
+|   |   |       gate.svg
+|   |   |       generate.js
+|   |   |       haas.svg
+|   |   |       lib.js
+|   |   |       limiter.svg
+|   |   |       multitap.svg
+|   |   |       noise-shaping.svg
+|   |   |       panner.svg
+|   |   |       phaser.svg
+|   |   |       ping-pong.svg
+|   |   |       pitch-shifter.svg
+|   |   |       reverb.svg
+|   |   |       ring-mod.svg
+|   |   |       slew-limiter.svg
+|   |   |       stereo-widener.svg
+|   |   |       transient-shaper.svg
+|   |   |       tremolo.svg
+|   |   |       vibrato.svg
+|   |   |       wah.svg
+|   |   |       
+|   |   +---spatial
+|   |   |       haas.js
+|   |   |       index.js
+|   |   |       panner.js
+|   |   |       stereo-widener.js
+|   |   |       
+|   |   \---utility
+|   |           gain.js
+|   |           index.js
+|   |           mixer.js
+|   |           noise-shaping.js
+|   |           slew-limiter.js
+|   |           
+|   +---audio-speaker
+|   |   |   binding.gyp
+|   |   |   browser.d.ts
+|   |   |   browser.js
+|   |   |   index.d.ts
+|   |   |   index.js
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   stream.d.ts
+|   |   |   stream.js
+|   |   |   
+|   |   +---build
+|   |   |   |   binding.sln
+|   |   |   |   config.gypi
+|   |   |   |   speaker.vcxproj
+|   |   |   |   speaker.vcxproj.filters
+|   |   |   |   
+|   |   |   \---Release
+|   |   |       |   speaker.exp
+|   |   |       |   speaker.iobj
+|   |   |       |   speaker.ipdb
+|   |   |       |   speaker.lib
+|   |   |       |   speaker.node
+|   |   |       |   speaker.pdb
+|   |   |       |   
+|   |   |       \---obj
+|   |   |           \---speaker
+|   |   |               |   speaker.node.recipe
+|   |   |               |   win_delay_load_hook.obj
+|   |   |               |   
+|   |   |               +---native
+|   |   |               |       speaker.obj
+|   |   |               |       
+|   |   |               \---speaker.tlog
+|   |   |                       CL.command.1.tlog
+|   |   |                       CL.read.1.tlog
+|   |   |                       CL.write.1.tlog
+|   |   |                       link.command.1.tlog
+|   |   |                       link.read.1.tlog
+|   |   |                       link.write.1.tlog
+|   |   |                       speaker.lastbuildstate
+|   |   |                       speaker.write.1u.tlog
+|   |   |                       
+|   |   +---native
+|   |   |       miniaudio.h
+|   |   |       speaker.c
+|   |   |       
+|   |   \---src
+|   |       |   backend.js
+|   |       |   
+|   |       \---backends
+|   |               miniaudio.js
+|   |               null.js
+|   |               process.js
+|   |               
+|   +---audio-type
+|   |       audio-type.js
+|   |       license
+|   |       package.json
+|   |       readme.md
+|   |       
+|   +---automation-events
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   +---build
+|   |   |   +---es2019
+|   |   |   |   |   module.d.ts
+|   |   |   |   |   module.d.ts.map
+|   |   |   |   |   module.js
+|   |   |   |   |   module.js.map
+|   |   |   |   |   
+|   |   |   |   +---classes
+|   |   |   |   |       automation-event-list.d.ts
+|   |   |   |   |       automation-event-list.d.ts.map
+|   |   |   |   |       automation-event-list.js
+|   |   |   |   |       automation-event-list.js.map
+|   |   |   |   |       
+|   |   |   |   +---functions
+|   |   |   |   |       create-cancel-and-hold-automation-event.d.ts
+|   |   |   |   |       create-cancel-and-hold-automation-event.d.ts.map
+|   |   |   |   |       create-cancel-and-hold-automation-event.js
+|   |   |   |   |       create-cancel-and-hold-automation-event.js.map
+|   |   |   |   |       create-cancel-scheduled-values-automation-event.d.ts
+|   |   |   |   |       create-cancel-scheduled-values-automation-event.d.ts.map
+|   |   |   |   |       create-cancel-scheduled-values-automation-event.js
+|   |   |   |   |       create-cancel-scheduled-values-automation-event.js.map
+|   |   |   |   |       create-exponential-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       create-exponential-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       create-exponential-ramp-to-value-automation-event.js
+|   |   |   |   |       create-exponential-ramp-to-value-automation-event.js.map
+|   |   |   |   |       create-extended-exponential-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       create-extended-exponential-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       create-extended-exponential-ramp-to-value-automation-event.js
+|   |   |   |   |       create-extended-exponential-ramp-to-value-automation-event.js.map
+|   |   |   |   |       create-extended-linear-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       create-extended-linear-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       create-extended-linear-ramp-to-value-automation-event.js
+|   |   |   |   |       create-extended-linear-ramp-to-value-automation-event.js.map
+|   |   |   |   |       create-linear-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       create-linear-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       create-linear-ramp-to-value-automation-event.js
+|   |   |   |   |       create-linear-ramp-to-value-automation-event.js.map
+|   |   |   |   |       create-set-target-automation-event.d.ts
+|   |   |   |   |       create-set-target-automation-event.d.ts.map
+|   |   |   |   |       create-set-target-automation-event.js
+|   |   |   |   |       create-set-target-automation-event.js.map
+|   |   |   |   |       create-set-value-automation-event.d.ts
+|   |   |   |   |       create-set-value-automation-event.d.ts.map
+|   |   |   |   |       create-set-value-automation-event.js
+|   |   |   |   |       create-set-value-automation-event.js.map
+|   |   |   |   |       create-set-value-curve-automation-event.d.ts
+|   |   |   |   |       create-set-value-curve-automation-event.d.ts.map
+|   |   |   |   |       create-set-value-curve-automation-event.js
+|   |   |   |   |       create-set-value-curve-automation-event.js.map
+|   |   |   |   |       get-end-time-and-value-of-previous-automation-event.d.ts
+|   |   |   |   |       get-end-time-and-value-of-previous-automation-event.d.ts.map
+|   |   |   |   |       get-end-time-and-value-of-previous-automation-event.js
+|   |   |   |   |       get-end-time-and-value-of-previous-automation-event.js.map
+|   |   |   |   |       get-event-time.d.ts
+|   |   |   |   |       get-event-time.d.ts.map
+|   |   |   |   |       get-event-time.js
+|   |   |   |   |       get-event-time.js.map
+|   |   |   |   |       get-exponential-ramp-value-at-time.d.ts
+|   |   |   |   |       get-exponential-ramp-value-at-time.d.ts.map
+|   |   |   |   |       get-exponential-ramp-value-at-time.js
+|   |   |   |   |       get-exponential-ramp-value-at-time.js.map
+|   |   |   |   |       get-linear-ramp-value-at-time.d.ts
+|   |   |   |   |       get-linear-ramp-value-at-time.d.ts.map
+|   |   |   |   |       get-linear-ramp-value-at-time.js
+|   |   |   |   |       get-linear-ramp-value-at-time.js.map
+|   |   |   |   |       get-target-value-at-time.d.ts
+|   |   |   |   |       get-target-value-at-time.d.ts.map
+|   |   |   |   |       get-target-value-at-time.js
+|   |   |   |   |       get-target-value-at-time.js.map
+|   |   |   |   |       get-value-curve-value-at-time.d.ts
+|   |   |   |   |       get-value-curve-value-at-time.d.ts.map
+|   |   |   |   |       get-value-curve-value-at-time.js
+|   |   |   |   |       get-value-curve-value-at-time.js.map
+|   |   |   |   |       get-value-of-automation-event-at-index-at-time.d.ts
+|   |   |   |   |       get-value-of-automation-event-at-index-at-time.d.ts.map
+|   |   |   |   |       get-value-of-automation-event-at-index-at-time.js
+|   |   |   |   |       get-value-of-automation-event-at-index-at-time.js.map
+|   |   |   |   |       interpolate-value.d.ts
+|   |   |   |   |       interpolate-value.d.ts.map
+|   |   |   |   |       interpolate-value.js
+|   |   |   |   |       interpolate-value.js.map
+|   |   |   |   |       truncate-value-curve.d.ts
+|   |   |   |   |       truncate-value-curve.d.ts.map
+|   |   |   |   |       truncate-value-curve.js
+|   |   |   |   |       truncate-value-curve.js.map
+|   |   |   |   |       
+|   |   |   |   +---guards
+|   |   |   |   |       any-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       any-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       any-ramp-to-value-automation-event.js
+|   |   |   |   |       any-ramp-to-value-automation-event.js.map
+|   |   |   |   |       cancel-and-hold-automation-event.d.ts
+|   |   |   |   |       cancel-and-hold-automation-event.d.ts.map
+|   |   |   |   |       cancel-and-hold-automation-event.js
+|   |   |   |   |       cancel-and-hold-automation-event.js.map
+|   |   |   |   |       cancel-scheduled-values-automation-event.d.ts
+|   |   |   |   |       cancel-scheduled-values-automation-event.d.ts.map
+|   |   |   |   |       cancel-scheduled-values-automation-event.js
+|   |   |   |   |       cancel-scheduled-values-automation-event.js.map
+|   |   |   |   |       exponential-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       exponential-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       exponential-ramp-to-value-automation-event.js
+|   |   |   |   |       exponential-ramp-to-value-automation-event.js.map
+|   |   |   |   |       linear-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       linear-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       linear-ramp-to-value-automation-event.js
+|   |   |   |   |       linear-ramp-to-value-automation-event.js.map
+|   |   |   |   |       set-target-automation-event.d.ts
+|   |   |   |   |       set-target-automation-event.d.ts.map
+|   |   |   |   |       set-target-automation-event.js
+|   |   |   |   |       set-target-automation-event.js.map
+|   |   |   |   |       set-value-automation-event.d.ts
+|   |   |   |   |       set-value-automation-event.d.ts.map
+|   |   |   |   |       set-value-automation-event.js
+|   |   |   |   |       set-value-automation-event.js.map
+|   |   |   |   |       set-value-curve-automation-event.d.ts
+|   |   |   |   |       set-value-curve-automation-event.d.ts.map
+|   |   |   |   |       set-value-curve-automation-event.js
+|   |   |   |   |       set-value-curve-automation-event.js.map
+|   |   |   |   |       
+|   |   |   |   +---interfaces
+|   |   |   |   |       cancel-and-hold-automation-event.d.ts
+|   |   |   |   |       cancel-and-hold-automation-event.d.ts.map
+|   |   |   |   |       cancel-and-hold-automation-event.js
+|   |   |   |   |       cancel-and-hold-automation-event.js.map
+|   |   |   |   |       cancel-scheduled-values-automation-event.d.ts
+|   |   |   |   |       cancel-scheduled-values-automation-event.d.ts.map
+|   |   |   |   |       cancel-scheduled-values-automation-event.js
+|   |   |   |   |       cancel-scheduled-values-automation-event.js.map
+|   |   |   |   |       exponential-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       exponential-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       exponential-ramp-to-value-automation-event.js
+|   |   |   |   |       exponential-ramp-to-value-automation-event.js.map
+|   |   |   |   |       extended-exponential-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       extended-exponential-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       extended-exponential-ramp-to-value-automation-event.js
+|   |   |   |   |       extended-exponential-ramp-to-value-automation-event.js.map
+|   |   |   |   |       extended-linear-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       extended-linear-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       extended-linear-ramp-to-value-automation-event.js
+|   |   |   |   |       extended-linear-ramp-to-value-automation-event.js.map
+|   |   |   |   |       index.d.ts
+|   |   |   |   |       index.d.ts.map
+|   |   |   |   |       index.js
+|   |   |   |   |       index.js.map
+|   |   |   |   |       linear-ramp-to-value-automation-event.d.ts
+|   |   |   |   |       linear-ramp-to-value-automation-event.d.ts.map
+|   |   |   |   |       linear-ramp-to-value-automation-event.js
+|   |   |   |   |       linear-ramp-to-value-automation-event.js.map
+|   |   |   |   |       set-target-automation-event.d.ts
+|   |   |   |   |       set-target-automation-event.d.ts.map
+|   |   |   |   |       set-target-automation-event.js
+|   |   |   |   |       set-target-automation-event.js.map
+|   |   |   |   |       set-value-automation-event.d.ts
+|   |   |   |   |       set-value-automation-event.d.ts.map
+|   |   |   |   |       set-value-automation-event.js
+|   |   |   |   |       set-value-automation-event.js.map
+|   |   |   |   |       set-value-curve-automation-event.d.ts
+|   |   |   |   |       set-value-curve-automation-event.d.ts.map
+|   |   |   |   |       set-value-curve-automation-event.js
+|   |   |   |   |       set-value-curve-automation-event.js.map
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           automation-event.d.ts
+|   |   |   |           automation-event.d.ts.map
+|   |   |   |           automation-event.js
+|   |   |   |           automation-event.js.map
+|   |   |   |           index.d.ts
+|   |   |   |           index.d.ts.map
+|   |   |   |           index.js
+|   |   |   |           index.js.map
+|   |   |   |           persistent-automation-event.d.ts
+|   |   |   |           persistent-automation-event.d.ts.map
+|   |   |   |           persistent-automation-event.js
+|   |   |   |           persistent-automation-event.js.map
+|   |   |   |           
+|   |   |   +---es5
+|   |   |   |       bundle.js
+|   |   |   |       
+|   |   |   \---node
+|   |   |       |   module.js
+|   |   |       |   
+|   |   |       +---classes
+|   |   |       |       automation-event-list.js
+|   |   |       |       
+|   |   |       +---functions
+|   |   |       |       create-cancel-and-hold-automation-event.js
+|   |   |       |       create-cancel-scheduled-values-automation-event.js
+|   |   |       |       create-exponential-ramp-to-value-automation-event.js
+|   |   |       |       create-extended-exponential-ramp-to-value-automation-event.js
+|   |   |       |       create-extended-linear-ramp-to-value-automation-event.js
+|   |   |       |       create-linear-ramp-to-value-automation-event.js
+|   |   |       |       create-set-target-automation-event.js
+|   |   |       |       create-set-value-automation-event.js
+|   |   |       |       create-set-value-curve-automation-event.js
+|   |   |       |       get-end-time-and-value-of-previous-automation-event.js
+|   |   |       |       get-event-time.js
+|   |   |       |       get-exponential-ramp-value-at-time.js
+|   |   |       |       get-linear-ramp-value-at-time.js
+|   |   |       |       get-target-value-at-time.js
+|   |   |       |       get-value-curve-value-at-time.js
+|   |   |       |       get-value-of-automation-event-at-index-at-time.js
+|   |   |       |       interpolate-value.js
+|   |   |       |       truncate-value-curve.js
+|   |   |       |       
+|   |   |       +---guards
+|   |   |       |       any-ramp-to-value-automation-event.js
+|   |   |       |       cancel-and-hold-automation-event.js
+|   |   |       |       cancel-scheduled-values-automation-event.js
+|   |   |       |       exponential-ramp-to-value-automation-event.js
+|   |   |       |       linear-ramp-to-value-automation-event.js
+|   |   |       |       set-target-automation-event.js
+|   |   |       |       set-value-automation-event.js
+|   |   |       |       set-value-curve-automation-event.js
+|   |   |       |       
+|   |   |       +---interfaces
+|   |   |       |       cancel-and-hold-automation-event.js
+|   |   |       |       cancel-scheduled-values-automation-event.js
+|   |   |       |       exponential-ramp-to-value-automation-event.js
+|   |   |       |       extended-exponential-ramp-to-value-automation-event.js
+|   |   |       |       extended-linear-ramp-to-value-automation-event.js
+|   |   |       |       index.js
+|   |   |       |       linear-ramp-to-value-automation-event.js
+|   |   |       |       set-target-automation-event.js
+|   |   |       |       set-value-automation-event.js
+|   |   |       |       set-value-curve-automation-event.js
+|   |   |       |       
+|   |   |       \---types
+|   |   |               automation-event.js
+|   |   |               index.js
+|   |   |               persistent-automation-event.js
+|   |   |               
+|   |   \---src
+|   |       |   module.ts
+|   |       |   tsconfig.json
+|   |       |   
+|   |       +---classes
+|   |       |       automation-event-list.ts
+|   |       |       
+|   |       +---functions
+|   |       |       create-cancel-and-hold-automation-event.ts
+|   |       |       create-cancel-scheduled-values-automation-event.ts
+|   |       |       create-exponential-ramp-to-value-automation-event.ts
+|   |       |       create-extended-exponential-ramp-to-value-automation-event.ts
+|   |       |       create-extended-linear-ramp-to-value-automation-event.ts
+|   |       |       create-linear-ramp-to-value-automation-event.ts
+|   |       |       create-set-target-automation-event.ts
+|   |       |       create-set-value-automation-event.ts
+|   |       |       create-set-value-curve-automation-event.ts
+|   |       |       get-end-time-and-value-of-previous-automation-event.ts
+|   |       |       get-event-time.ts
+|   |       |       get-exponential-ramp-value-at-time.ts
+|   |       |       get-linear-ramp-value-at-time.ts
+|   |       |       get-target-value-at-time.ts
+|   |       |       get-value-curve-value-at-time.ts
+|   |       |       get-value-of-automation-event-at-index-at-time.ts
+|   |       |       interpolate-value.ts
+|   |       |       truncate-value-curve.ts
+|   |       |       
+|   |       +---guards
+|   |       |       any-ramp-to-value-automation-event.ts
+|   |       |       cancel-and-hold-automation-event.ts
+|   |       |       cancel-scheduled-values-automation-event.ts
+|   |       |       exponential-ramp-to-value-automation-event.ts
+|   |       |       linear-ramp-to-value-automation-event.ts
+|   |       |       set-target-automation-event.ts
+|   |       |       set-value-automation-event.ts
+|   |       |       set-value-curve-automation-event.ts
+|   |       |       
+|   |       +---interfaces
+|   |       |       cancel-and-hold-automation-event.ts
+|   |       |       cancel-scheduled-values-automation-event.ts
+|   |       |       exponential-ramp-to-value-automation-event.ts
+|   |       |       extended-exponential-ramp-to-value-automation-event.ts
+|   |       |       extended-linear-ramp-to-value-automation-event.ts
+|   |       |       index.ts
+|   |       |       linear-ramp-to-value-automation-event.ts
+|   |       |       set-target-automation-event.ts
+|   |       |       set-value-automation-event.ts
+|   |       |       set-value-curve-automation-event.ts
+|   |       |       
+|   |       \---types
+|   |               automation-event.ts
+|   |               index.ts
+|   |               persistent-automation-event.ts
+|   |               
+|   +---buffer-from
+|   |       index.js
+|   |       LICENSE
+|   |       package.json
+|   |       readme.md
+|   |       
+|   +---codec-parser
+|   |   |   .prettierignore
+|   |   |   index.d.ts
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   +---.github
+|   |   |       FUNDING.yml
+|   |   |       
+|   |   \---src
+|   |       |   CodecParser.js
+|   |       |   constants.js
+|   |       |   globals.js
+|   |       |   utilities.js
+|   |       |   
+|   |       +---codecs
+|   |       |   |   CodecFrame.js
+|   |       |   |   CodecHeader.js
+|   |       |   |   HeaderCache.js
+|   |       |   |   Parser.js
+|   |       |   |   
+|   |       |   +---aac
+|   |       |   |       AACFrame.js
+|   |       |   |       AACHeader.js
+|   |       |   |       AACParser.js
+|   |       |   |       
+|   |       |   +---flac
+|   |       |   |       FLACFrame.js
+|   |       |   |       FLACHeader.js
+|   |       |   |       FLACParser.js
+|   |       |   |       
+|   |       |   +---mpeg
+|   |       |   |       MPEGFrame.js
+|   |       |   |       MPEGHeader.js
+|   |       |   |       MPEGParser.js
+|   |       |   |       
+|   |       |   +---opus
+|   |       |   |       OpusFrame.js
+|   |       |   |       OpusHeader.js
+|   |       |   |       OpusParser.js
+|   |       |   |       
+|   |       |   \---vorbis
+|   |       |           VorbisFrame.js
+|   |       |           VorbisHeader.js
+|   |       |           VorbisParser.js
+|   |       |           
+|   |       +---containers
+|   |       |   |   Frame.js
+|   |       |   |   
+|   |       |   \---ogg
+|   |       |           OggPage.js
+|   |       |           OggPageHeader.js
+|   |       |           OggParser.js
+|   |       |           
+|   |       \---metadata
+|   |               ID3v2.js
+|   |               
+|   +---commander
+|   |   |   CHANGELOG.md
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   Readme.md
+|   |   |   
+|   |   \---typings
+|   |           index.d.ts
+|   |           
+|   +---commondir
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   readme.markdown
+|   |   |   
+|   |   +---example
+|   |   |       dir.js
+|   |   |       
+|   |   \---test
+|   |           dirs.js
+|   |           
+|   +---deepmerge
+|   |   |   .editorconfig
+|   |   |   .eslintcache
+|   |   |   changelog.md
+|   |   |   index.d.ts
+|   |   |   index.js
+|   |   |   license.txt
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   rollup.config.js
+|   |   |   
+|   |   \---dist
+|   |           cjs.js
+|   |           umd.js
+|   |           
+|   +---digital-filter
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   +---adaptive
+|   |   |       levinson.js
+|   |   |       lms.js
+|   |   |       nlms.js
+|   |   |       rls.js
+|   |   |       
+|   |   +---core
+|   |   |       analysis.js
+|   |   |       convert.js
+|   |   |       convolution.js
+|   |   |       deconvolve.js
+|   |   |       detrend.js
+|   |   |       filter.js
+|   |   |       filtfilt.js
+|   |   |       freqz.js
+|   |   |       iir.js
+|   |   |       matched-z.js
+|   |   |       residue.js
+|   |   |       statespace.js
+|   |   |       transform.js
+|   |   |       wiener.js
+|   |   |       
+|   |   +---fir
+|   |   |       differentiator.js
+|   |   |       firls.js
+|   |   |       firwin.js
+|   |   |       firwin2.js
+|   |   |       gaussian-fir.js
+|   |   |       hilbert.js
+|   |   |       integrator.js
+|   |   |       kaiserord.js
+|   |   |       lattice.js
+|   |   |       matched-filter.js
+|   |   |       minimum-phase.js
+|   |   |       raised-cosine.js
+|   |   |       remez.js
+|   |   |       util.js
+|   |   |       warped-fir.js
+|   |   |       yulewalk.js
+|   |   |       
+|   |   +---iir
+|   |   |       bessel.js
+|   |   |       biquad.js
+|   |   |       butterworth.js
+|   |   |       chebyshev.js
+|   |   |       chebyshev2.js
+|   |   |       elliptic.js
+|   |   |       iirdesign.js
+|   |   |       legendre.js
+|   |   |       linkwitz-riley.js
+|   |   |       ordest.js
+|   |   |       svf.js
+|   |   |       
+|   |   +---multirate
+|   |   |       cic.js
+|   |   |       decimate.js
+|   |   |       farrow.js
+|   |   |       half-band.js
+|   |   |       interpolate.js
+|   |   |       oversample.js
+|   |   |       polyphase.js
+|   |   |       resample.js
+|   |   |       thiran.js
+|   |   |       upfirdn.js
+|   |   |       
+|   |   +---plot
+|   |   |       bessel.svg
+|   |   |       biquad-allpass.svg
+|   |   |       biquad-bandpass2.svg
+|   |   |       biquad-highpass.svg
+|   |   |       biquad-highshelf.svg
+|   |   |       biquad-lowpass.svg
+|   |   |       biquad-lowshelf.svg
+|   |   |       biquad-notch.svg
+|   |   |       biquad-peaking.svg
+|   |   |       biquad-types.svg
+|   |   |       butterworth-hp.svg
+|   |   |       butterworth-orders.svg
+|   |   |       butterworth.svg
+|   |   |       chebyshev.svg
+|   |   |       chebyshev2.svg
+|   |   |       cic.svg
+|   |   |       decimate.svg
+|   |   |       differentiator.svg
+|   |   |       dynamic-smoothing.svg
+|   |   |       elliptic.svg
+|   |   |       farrow.svg
+|   |   |       firls.svg
+|   |   |       firwin-bp.svg
+|   |   |       firwin-hp.svg
+|   |   |       firwin-lp.svg
+|   |   |       firwin2.svg
+|   |   |       gaussian-fir.svg
+|   |   |       gaussian-iir.svg
+|   |   |       generate.js
+|   |   |       half-band.svg
+|   |   |       hilbert.svg
+|   |   |       iir-comparison.svg
+|   |   |       index.js
+|   |   |       integrator.svg
+|   |   |       interpolate.svg
+|   |   |       lattice.svg
+|   |   |       leaky-integrator.svg
+|   |   |       legendre.svg
+|   |   |       levinson.svg
+|   |   |       linkwitz-riley-high.svg
+|   |   |       linkwitz-riley-low.svg
+|   |   |       lms.svg
+|   |   |       matched-filter.svg
+|   |   |       median.svg
+|   |   |       minimum-phase.svg
+|   |   |       moving-average.svg
+|   |   |       nlms.svg
+|   |   |       one-euro.svg
+|   |   |       one-pole.svg
+|   |   |       oversample.svg
+|   |   |       polyphase.svg
+|   |   |       raised-cosine.svg
+|   |   |       remez.svg
+|   |   |       rls.svg
+|   |   |       savitzky-golay.svg
+|   |   |       svf-bandpass.svg
+|   |   |       svf-highpass.svg
+|   |   |       svf-lowpass.svg
+|   |   |       svf-notch.svg
+|   |   |       thiran.svg
+|   |   |       warped-fir.svg
+|   |   |       yulewalk.svg
+|   |   |       
+|   |   \---smooth
+|   |           dynamic-smoothing.js
+|   |           gaussian-iir.js
+|   |           leaky-integrator.js
+|   |           median.js
+|   |           moving-average.js
+|   |           one-euro.js
+|   |           one-pole.js
+|   |           savitzky-golay.js
+|   |           
+|   +---es-errors
+|   |   |   .eslintrc
+|   |   |   CHANGELOG.md
+|   |   |   eval.d.ts
+|   |   |   eval.js
+|   |   |   index.d.ts
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   range.d.ts
+|   |   |   range.js
+|   |   |   README.md
+|   |   |   ref.d.ts
+|   |   |   ref.js
+|   |   |   syntax.d.ts
+|   |   |   syntax.js
+|   |   |   tsconfig.json
+|   |   |   type.d.ts
+|   |   |   type.js
+|   |   |   uri.d.ts
+|   |   |   uri.js
+|   |   |   
+|   |   +---.github
+|   |   |       FUNDING.yml
+|   |   |       
+|   |   \---test
+|   |           index.js
+|   |           
+|   +---estree-walker
+|   |   |   CHANGELOG.md
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   +---dist
+|   |   |   +---esm
+|   |   |   |       estree-walker.js
+|   |   |   |       package.json
+|   |   |   |       
+|   |   |   \---umd
+|   |   |           estree-walker.js
+|   |   |           
+|   |   +---src
+|   |   |       async.js
+|   |   |       index.js
+|   |   |       package.json
+|   |   |       sync.js
+|   |   |       walker.js
+|   |   |       
+|   |   \---types
+|   |           async.d.ts
+|   |           index.d.ts
+|   |           sync.d.ts
+|   |           tsconfig.tsbuildinfo
+|   |           walker.d.ts
+|   |           
+|   +---fdir
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   \---dist
+|   |           index.cjs
+|   |           index.d.cts
+|   |           index.d.mts
+|   |           index.mjs
+|   |           
+|   +---fourier-transform
+|   |       index.js
+|   |       LICENSE
+|   |       package.json
+|   |       readme.md
+|   |       stft.js
+|   |       
+|   +---function-bind
+|   |   |   .eslintrc
+|   |   |   .nycrc
+|   |   |   CHANGELOG.md
+|   |   |   implementation.js
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   +---.github
+|   |   |       FUNDING.yml
+|   |   |       SECURITY.md
+|   |   |       
+|   |   \---test
+|   |           .eslintrc
+|   |           index.js
+|   |           
+|   +---hasown
+|   |   |   .nycrc
+|   |   |   CHANGELOG.md
+|   |   |   eslint.config.mjs
+|   |   |   index.d.ts
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   tsconfig.json
+|   |   |   
+|   |   \---.github
+|   |           FUNDING.yml
+|   |           
+|   +---is-core-module
+|   |   |   .eslintrc
+|   |   |   .nycrc
+|   |   |   CHANGELOG.md
+|   |   |   core.json
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   \---test
+|   |           index.js
+|   |           
+|   +---is-module
+|   |       .npmignore
+|   |       component.json
+|   |       index.js
+|   |       package.json
+|   |       README.md
+|   |       
+|   +---is-reference
+|   |   |   CHANGELOG.md
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   \---dist
+|   |       |   is-reference.es.js
+|   |       |   is-reference.js
+|   |       |   
+|   |       \---types
+|   |               index.d.ts
+|   |               
+|   +---magic-string
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   \---dist
+|   |           magic-string.cjs.d.ts
+|   |           magic-string.cjs.js
+|   |           magic-string.cjs.js.map
+|   |           magic-string.es.d.mts
+|   |           magic-string.es.mjs
+|   |           magic-string.es.mjs.map
+|   |           magic-string.umd.js
+|   |           magic-string.umd.js.map
+|   |           
+|   +---mpg123-decoder
+|   |   |   index.js
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   types.d.ts
+|   |   |   
+|   |   +---dist
+|   |   |       mpg123-decoder.min.js
+|   |   |       mpg123-decoder.min.js.map
+|   |   |       
+|   |   \---src
+|   |           EmscriptenWasm.js
+|   |           MPEGDecoder.js
+|   |           MPEGDecoderWebWorker.js
+|   |           
+|   +---ogg-opus-decoder
+|   |   |   index.js
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   types.d.ts
+|   |   |   
+|   |   +---dist
+|   |   |       ogg-opus-decoder.min.js
+|   |   |       ogg-opus-decoder.min.js.map
+|   |   |       ogg-opus-decoder.opus-ml.min.js
+|   |   |       ogg-opus-decoder.opus-ml.min.js.map
+|   |   |       
+|   |   \---src
+|   |           OggOpusDecoder.js
+|   |           OggOpusDecoderWebWorker.js
+|   |           
+|   +---opus-decoder
+|   |   |   index.js
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   types.d.ts
+|   |   |   
+|   |   +---dist
+|   |   |       opus-decoder.min.js
+|   |   |       opus-decoder.min.js.map
+|   |   |       
+|   |   \---src
+|   |           EmscriptenWasm.js
+|   |           OpusDecoder.js
+|   |           OpusDecoderWebWorker.js
+|   |           
+|   +---path-parse
+|   |       index.js
+|   |       LICENSE
+|   |       package.json
+|   |       README.md
+|   |       
+|   +---pcm-convert
+|   |       index.js
+|   |       LICENSE
+|   |       package.json
+|   |       readme.md
+|   |       test.js
+|   |       
+|   +---periodic-function
+|   |       .eslintrc.json
+|   |       .travis.yml
+|   |       clausen.js
+|   |       cosine.js
+|   |       fourier.js
+|   |       generate-plots.js
+|   |       index.js
+|   |       interpolate.js
+|   |       noise.js
+|   |       package.json
+|   |       pulse.js
+|   |       readme.md
+|   |       sawtooth.js
+|   |       sine.js
+|   |       square.js
+|   |       step.js
+|   |       test.js
+|   |       trapezoid.js
+|   |       triangle.js
+|   |       wavetable.js
+|   |       
+|   +---picomatch
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   posix.js
+|   |   |   README.md
+|   |   |   
+|   |   \---lib
+|   |           constants.js
+|   |           parse.js
+|   |           picomatch.js
+|   |           scan.js
+|   |           utils.js
+|   |           
+|   +---qoa-format
+|   |   |   decode.js
+|   |   |   encode.js
+|   |   |   index.js
+|   |   |   LICENSE.md
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   \---lib
+|   |           common.js
+|   |           
+|   +---resolve
+|   |   |   .editorconfig
+|   |   |   .eslintrc
+|   |   |   async.js
+|   |   |   eslint.config.mjs
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   readme.markdown
+|   |   |   SECURITY.md
+|   |   |   sync.js
+|   |   |   
+|   |   +---.claude
+|   |   |       notes.md
+|   |   |       settings.local.json
+|   |   |       
+|   |   +---.github
+|   |   |       FUNDING.yml
+|   |   |       INCIDENT_RESPONSE_PROCESS.md
+|   |   |       THREAT_MODEL.md
+|   |   |       
+|   |   +---bin
+|   |   |       resolve
+|   |   |       
+|   |   +---example
+|   |   |       async.js
+|   |   |       sync.js
+|   |   |       
+|   |   +---lib
+|   |   |       async.js
+|   |   |       caller.js
+|   |   |       core.js
+|   |   |       core.json
+|   |   |       homedir.js
+|   |   |       is-core.js
+|   |   |       node-modules-paths.js
+|   |   |       normalize-options.js
+|   |   |       sync.js
+|   |   |       
+|   |   \---test
+|   |       |   core.js
+|   |       |   default_paths.js
+|   |       |   dotdot.js
+|   |       |   faulty_basedir.js
+|   |       |   filter.js
+|   |       |   filter_sync.js
+|   |       |   homedir.js
+|   |       |   home_paths.js
+|   |       |   home_paths_sync.js
+|   |       |   mock.js
+|   |       |   mock_sync.js
+|   |       |   module_dir.js
+|   |       |   node-modules-paths.js
+|   |       |   node_path.js
+|   |       |   nonstring.js
+|   |       |   pathfilter.js
+|   |       |   pathfilter_sync.js
+|   |       |   precedence.js
+|   |       |   resolver.js
+|   |       |   resolver_sync.js
+|   |       |   shadowed_core.js
+|   |       |   subdirs.js
+|   |       |   symlinks.js
+|   |       |   
+|   |       +---dotdot
+|   |       |   |   index.js
+|   |       |   |   
+|   |       |   \---abc
+|   |       |           index.js
+|   |       |           
+|   |       +---module_dir
+|   |       |   +---xmodules
+|   |       |   |   \---aaa
+|   |       |   |           index.js
+|   |       |   |           
+|   |       |   +---ymodules
+|   |       |   |   \---aaa
+|   |       |   |           index.js
+|   |       |   |           
+|   |       |   \---zmodules
+|   |       |       \---bbb
+|   |       |               main.js
+|   |       |               package.json
+|   |       |               
+|   |       +---node_path
+|   |       |   +---x
+|   |       |   |   +---aaa
+|   |       |   |   |       index.js
+|   |       |   |   |       
+|   |       |   |   \---ccc
+|   |       |   |           index.js
+|   |       |   |           
+|   |       |   \---y
+|   |       |       +---bbb
+|   |       |       |       index.js
+|   |       |       |       
+|   |       |       \---ccc
+|   |       |               index.js
+|   |       |               
+|   |       +---pathfilter
+|   |       |   \---deep_ref
+|   |       |           main.js
+|   |       |           
+|   |       +---precedence
+|   |       |   |   aaa.js
+|   |       |   |   bbb.js
+|   |       |   |   
+|   |       |   +---aaa
+|   |       |   |       index.js
+|   |       |   |       main.js
+|   |       |   |       
+|   |       |   \---bbb
+|   |       |           main.js
+|   |       |           
+|   |       +---resolver
+|   |       |   |   cup.coffee
+|   |       |   |   foo.js
+|   |       |   |   mug.coffee
+|   |       |   |   mug.js
+|   |       |   |   
+|   |       |   +---baz
+|   |       |   |       doom.js
+|   |       |   |       package.json
+|   |       |   |       quux.js
+|   |       |   |       
+|   |       |   +---browser_field
+|   |       |   |       a.js
+|   |       |   |       b.js
+|   |       |   |       package.json
+|   |       |   |       
+|   |       |   +---dot_main
+|   |       |   |       index.js
+|   |       |   |       package.json
+|   |       |   |       
+|   |       |   +---dot_slash_main
+|   |       |   |       index.js
+|   |       |   |       package.json
+|   |       |   |       
+|   |       |   +---false_main
+|   |       |   |       index.js
+|   |       |   |       package.json
+|   |       |   |       
+|   |       |   +---incorrect_main
+|   |       |   |       index.js
+|   |       |   |       package.json
+|   |       |   |       
+|   |       |   +---invalid_main
+|   |       |   |       package.json
+|   |       |   |       
+|   |       |   +---multirepo
+|   |       |   |   |   lerna.json
+|   |       |   |   |   package.json
+|   |       |   |   |   
+|   |       |   |   \---packages
+|   |       |   |       +---package-a
+|   |       |   |       |       index.js
+|   |       |   |       |       package.json
+|   |       |   |       |       
+|   |       |   |       \---package-b
+|   |       |   |               index.js
+|   |       |   |               package.json
+|   |       |   |               
+|   |       |   +---nested_symlinks
+|   |       |   |   \---mylib
+|   |       |   |           async.js
+|   |       |   |           package.json
+|   |       |   |           sync.js
+|   |       |   |           
+|   |       |   +---other_path
+|   |       |   |   |   root.js
+|   |       |   |   |   
+|   |       |   |   \---lib
+|   |       |   |           other-lib.js
+|   |       |   |           
+|   |       |   +---quux
+|   |       |   |   \---foo
+|   |       |   |           index.js
+|   |       |   |           
+|   |       |   +---same_names
+|   |       |   |   |   foo.js
+|   |       |   |   |   
+|   |       |   |   \---foo
+|   |       |   |           index.js
+|   |       |   |           
+|   |       |   +---symlinked
+|   |       |   |   +---package
+|   |       |   |   |       bar.js
+|   |       |   |   |       package.json
+|   |       |   |   |       
+|   |       |   |   \---_
+|   |       |   |       +---node_modules
+|   |       |   |       |       foo.js
+|   |       |   |       |       
+|   |       |   |       \---symlink_target
+|   |       |   |               .gitkeep
+|   |       |   |               
+|   |       |   \---without_basedir
+|   |       |           main.js
+|   |       |           
+|   |       \---shadowed_core
+|   |           \---node_modules
+|   |               \---util
+|   |                       index.js
+|   |                       
+|   +---rollup
+|   |   |   LICENSE.md
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   \---dist
+|   |       |   getLogFilter.d.ts
+|   |       |   getLogFilter.js
+|   |       |   loadConfigFile.d.ts
+|   |       |   loadConfigFile.js
+|   |       |   native.js
+|   |       |   parseAst.d.ts
+|   |       |   parseAst.js
+|   |       |   rollup.d.ts
+|   |       |   rollup.js
+|   |       |   
+|   |       +---bin
+|   |       |       rollup
+|   |       |       
+|   |       +---es
+|   |       |   |   getLogFilter.js
+|   |       |   |   package.json
+|   |       |   |   parseAst.js
+|   |       |   |   rollup.js
+|   |       |   |   
+|   |       |   \---shared
+|   |       |           node-entry.js
+|   |       |           parseAst.js
+|   |       |           watch.js
+|   |       |           
+|   |       \---shared
+|   |               fsevents-importer.js
+|   |               index.js
+|   |               loadConfigFile.js
+|   |               parseAst.js
+|   |               rollup.js
+|   |               watch-cli.js
+|   |               watch.js
+|   |               
+|   +---serialize-javascript
+|   |       index.js
+|   |       LICENSE
+|   |       package.json
+|   |       README.md
+|   |       
+|   +---simple-yenc
+|   |   |   .prettierignore
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   rollup.config.js
+|   |   |   
+|   |   +---.github
+|   |   |       FUNDING.yml
+|   |   |       
+|   |   +---dist
+|   |   |       esm.js
+|   |   |       index.js
+|   |   |       
+|   |   \---src
+|   |           simple-yenc.js
+|   |           
+|   +---smob
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.MD
+|   |   |   
+|   |   \---dist
+|   |           index.cjs
+|   |           index.cjs.map
+|   |           index.d.cts
+|   |           index.d.mts
+|   |           index.mjs
+|   |           index.mjs.map
+|   |           
+|   +---source-map
+|   |   |   CHANGELOG.md
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   source-map.d.ts
+|   |   |   source-map.js
+|   |   |   
+|   |   +---dist
+|   |   |       source-map.debug.js
+|   |   |       source-map.js
+|   |   |       source-map.min.js
+|   |   |       source-map.min.js.map
+|   |   |       
+|   |   \---lib
+|   |           array-set.js
+|   |           base64-vlq.js
+|   |           base64.js
+|   |           binary-search.js
+|   |           mapping-list.js
+|   |           quick-sort.js
+|   |           source-map-consumer.js
+|   |           source-map-generator.js
+|   |           source-node.js
+|   |           util.js
+|   |           
+|   +---source-map-support
+|   |       browser-source-map-support.js
+|   |       LICENSE.md
+|   |       package.json
+|   |       README.md
+|   |       register-hook-require.js
+|   |       register.js
+|   |       source-map-support.js
+|   |       
+|   +---supports-preserve-symlinks-flag
+|   |   |   .eslintrc
+|   |   |   .nycrc
+|   |   |   browser.js
+|   |   |   CHANGELOG.md
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   
+|   |   +---.github
+|   |   |       FUNDING.yml
+|   |   |       
+|   |   \---test
+|   |           index.js
+|   |           
+|   +---terser
+|   |   |   CHANGELOG.md
+|   |   |   LICENSE
+|   |   |   main.js
+|   |   |   package.json
+|   |   |   PATRONS.md
+|   |   |   README.md
+|   |   |   
+|   |   +---bin
+|   |   |       package.json
+|   |   |       terser
+|   |   |       uglifyjs
+|   |   |       
+|   |   +---dist
+|   |   |       .gitkeep
+|   |   |       bundle.min.js
+|   |   |       package.json
+|   |   |       
+|   |   +---lib
+|   |   |   |   ast.js
+|   |   |   |   cli.js
+|   |   |   |   equivalent-to.js
+|   |   |   |   minify.js
+|   |   |   |   mozilla-ast.js
+|   |   |   |   output.js
+|   |   |   |   parse.js
+|   |   |   |   propmangle.js
+|   |   |   |   scope.js
+|   |   |   |   size.js
+|   |   |   |   sourcemap.js
+|   |   |   |   transform.js
+|   |   |   |   
+|   |   |   +---compress
+|   |   |   |       common.js
+|   |   |   |       compressor-flags.js
+|   |   |   |       drop-side-effect-free.js
+|   |   |   |       drop-unused.js
+|   |   |   |       evaluate.js
+|   |   |   |       global-defs.js
+|   |   |   |       index.js
+|   |   |   |       inference.js
+|   |   |   |       inline.js
+|   |   |   |       native-objects.js
+|   |   |   |       reduce-vars.js
+|   |   |   |       tighten-body.js
+|   |   |   |       
+|   |   |   \---utils
+|   |   |           first_in_statement.js
+|   |   |           index.js
+|   |   |           
+|   |   \---tools
+|   |           domprops.js
+|   |           exit.cjs
+|   |           props.html
+|   |           terser.d.ts
+|   |           
+|   +---tslib
+|   |   |   CopyrightNotice.txt
+|   |   |   LICENSE.txt
+|   |   |   package.json
+|   |   |   README.md
+|   |   |   SECURITY.md
+|   |   |   tslib.d.ts
+|   |   |   tslib.es6.html
+|   |   |   tslib.es6.js
+|   |   |   tslib.es6.mjs
+|   |   |   tslib.html
+|   |   |   tslib.js
+|   |   |   
+|   |   \---modules
+|   |           index.d.ts
+|   |           index.js
+|   |           package.json
+|   |           
+|   +---web-audio-api
+|   |   |   index.d.ts
+|   |   |   index.js
+|   |   |   LICENSE
+|   |   |   package.json
+|   |   |   polyfill.js
+|   |   |   README.md
+|   |   |   
+|   |   \---src
+|   |       |   AnalyserNode.js
+|   |       |   AudioBufferSourceNode.js
+|   |       |   AudioContext.js
+|   |       |   AudioDestinationNode.js
+|   |       |   AudioListener.js
+|   |       |   AudioNode.js
+|   |       |   AudioParam.js
+|   |       |   audioports.js
+|   |       |   AudioScheduledSourceNode.js
+|   |       |   AudioWorklet.js
+|   |       |   BaseAudioContext.js
+|   |       |   BiquadFilterNode.js
+|   |       |   ChannelMergerNode.js
+|   |       |   ChannelMixing.js
+|   |       |   ChannelSplitterNode.js
+|   |       |   constants.js
+|   |       |   ConstantSourceNode.js
+|   |       |   ConvolverNode.js
+|   |       |   DelayNode.js
+|   |       |   DspObject.js
+|   |       |   DynamicsCompressorNode.js
+|   |       |   Emitter.js
+|   |       |   errors.js
+|   |       |   FloatPoint3D.js
+|   |       |   GainNode.js
+|   |       |   IIRFilterNode.js
+|   |       |   mathUtils.js
+|   |       |   MediaStream.js
+|   |       |   MediaStreamAudioSourceNode.js
+|   |       |   OfflineAudioContext.js
+|   |       |   OscillatorNode.js
+|   |       |   PeriodicWave.js
+|   |       |   ScriptProcessorNode.js
+|   |       |   StereoPannerNode.js
+|   |       |   utils.js
+|   |       |   WaveShaperNode.js
+|   |       |   
+|   |       \---PannerNode
+|   |               ConeEffect.js
+|   |               DistanceEffect.js
+|   |               index.js
+|   |               PannerNode.js
+|   |               
+|   \---ws
+|       |   browser.js
+|       |   index.js
+|       |   LICENSE
+|       |   package.json
+|       |   README.md
+|       |   wrapper.mjs
+|       |   
+|       \---lib
+|               buffer-util.js
+|               constants.js
+|               event-target.js
+|               extension.js
+|               limiter.js
+|               permessage-deflate.js
+|               receiver.js
+|               sender.js
+|               stream.js
+|               subprotocol.js
+|               validation.js
+|               websocket-server.js
+|               websocket.js
+|               
+\---src
+    |   pst_main.js
+    |   tree.txt
+    |   
+    +---.vscode
+    |       launch.json
+    |       
+    +---game
+    |       pst_coins.js
+    |       pst_ghost.js
+    |       pst_maze.js
+    |       pst_pacman.js
+    |       pst_scene.js
+    |       pst_sprite.js
+    |       
+    +---rnd
+    |   |   pst_mesh.js
+    |   |   pst_pipeline.js
+    |   |   pst_primitive.js
+    |   |   
+    |   \---res
+    |       |   pst_uniforms.js
+    |       |   
+    |       \---shd
+    |               pst_shaders.js
+    |               
+    \---utils
+        \---input
+            \---keyboard
+                    pst_keyboard.js
+                    
