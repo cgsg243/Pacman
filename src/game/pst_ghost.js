@@ -54,6 +54,7 @@ export class Pst_Ghost
             {
                 const nx = this.tileX + this.nextDirX;
                 const ny = this.tileY + this.nextDirY;
+                
                 if (!this.maze.isWall(nx, ny))
                 {
                     this.dirX = this.nextDirX;

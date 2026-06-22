@@ -251,8 +251,9 @@ setInterval(() => {
     }
 }, 50);
 
-io.on("connection", (socket) => {
-    console.log(`🔗 Client connected with id: ${socket.id}`);
+io.on("connection", (socket) =>
+{
+    console.log(`Client connected with id: ${socket.id}`);
 
     socket.on("register", (data) => {
         const name = data?.nickname?.trim() || 'Player';
@@ -265,7 +266,7 @@ io.on("connection", (socket) => {
             lives: 3
         };
 
-        console.log(`📝 Player registered: ${name} (${socket.id})`);
+        console.log(`Player registered: ${name} (${socket.id})`);
 
         socket.emit("init", {
             id: socket.id,
@@ -343,13 +344,13 @@ io.on("connection", (socket) => {
         const client = clients[socket.id];
         if (!client) return;
 
-        console.log(`💬 ${client.nickname}: ${msg}`);
+        console.log(`${client.nickname}: ${msg}`);
         broadcastToAll("messageFromServer", `${client.nickname}: ${msg}`);
     });
 
     socket.on("disconnect", () => {
         const client = clients[socket.id];
-        console.log(`❌ Client disconnected with id: ${socket.id}`);
+        console.log(`Client disconnected with id: ${socket.id}`);
 
         if (client) {
             broadcastToAll("playerLeft", { id: socket.id });
@@ -360,7 +361,8 @@ io.on("connection", (socket) => {
     });
 });
 
-server.listen(port, "0.0.0.0", () => {
+server.listen(port, "0.0.0.0", () =>
+{
     console.log(`  http://localhost:${port}`);
     console.log(`  http://127.0.0.1:${port}`);
 });

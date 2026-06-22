@@ -15,13 +15,13 @@ export class Pst_Primitive
             let a = (i / segments) * Math.PI * 2;
             let da = a - angle;
 
-            while (da > Math.PI) da -= Math.PI * 2;
-            while (da < -Math.PI) da += Math.PI * 2;
+            while (da > Math.PI)
+                 da -= Math.PI * 2;
+            while (da < -Math.PI)
+                 da += Math.PI * 2;
 
             if (mouthOpen > 0.01 && Math.abs(da) < mouthHalf)
-            {
                 continue;
-            }
 
             const x = Math.cos(a) * radius;
             const y = Math.sin(a) * radius;
@@ -188,7 +188,7 @@ export class Pst_Primitive
     {
         const verts = [];
         const inds = [];
-        
+
         verts.push(0, 0, 0, 0.5, 0.5);
 
         for (let i = 0; i < segments; i++)
@@ -212,23 +212,23 @@ export class Pst_Primitive
     static heart(size)
     {
        const verts = [];
-        const inds = [];
-        verts.push(0, 0, 0);
+       const inds = [];
+       verts.push(0, 0, 0);
 
-        const steps = 64;
-        for (let i = 0; i < steps; i++)
-        {
-            const t = (i / steps) * Math.PI * 2;
-            const x = 16 * Math.pow(Math.sin(t), 3) * size * 0.02;
-            const y = (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t)) * size * 0.02;
+       const steps = 64;
+       for (let i = 0; i < steps; i++)
+       {
+           const t = (i / steps) * Math.PI * 2;
+           const x = 16 * Math.pow(Math.sin(t), 3) * size * 0.02;
+           const y = (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t)) * size * 0.02;
 
-            verts.push(x, y, 0);
-        }
+           verts.push(x, y, 0);
+       }
 
-        for (let i = 1; i < steps; i++)
-           inds.push(0, i, i + 1);
-        inds.push(0, steps, 1);
+       for (let i = 1; i < steps; i++)
+          inds.push(0, i, i + 1);
+       inds.push(0, steps, 1);
 
-        return { vertices: new Float32Array(verts), indices: new Uint16Array(inds) };
+       return { vertices: new Float32Array(verts), indices: new Uint16Array(inds) };
     }
 }
