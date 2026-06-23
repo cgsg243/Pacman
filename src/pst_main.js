@@ -491,6 +491,12 @@ function rebuildMazeMesh(maze, device)
             serverFruit = null;
     });
 
+    socket.on('levelData', (data) =>
+    {
+        if (remotePlayers[data.id])
+            remotePlayers[data.id].level = data.level;
+    });
+
     socket.on('gameWinner', (data) =>
     {
         showWinnerScreen = true;
@@ -549,6 +555,10 @@ function rebuildMazeMesh(maze, device)
         const youWonMsg = document.getElementById('you-won-message');
         if (youWonMsg)
            youWonMsg.remove();
+        
+        const gameOverEl = document.getElementById('game-over');
+        if (gameOverEl)
+            gameOverEl.style.display = 'none';
         
         restartBtn.style.display = 'block';
         
@@ -687,14 +697,9 @@ function rebuildMazeMesh(maze, device)
             if (youWonMsg)
                youWonMsg.remove();
             
-            const level1Map = LEVEL_MAPS ? LEVEL_MAPS[1] : null;
-            if (level1Map)
-            {
-                maze.setGrid(level1Map);
-                rebuildMazeMesh(maze, device);
-                coins = rebuildCoins(maze, device, layout);
-                superCoins = generateSuperCoins(maze, PST_SUPER_COIN_COUNT);
-            }
+            const gameOverEl = document.getElementById('game-over');
+            if (gameOverEl)
+                gameOverEl.style.display = 'none';
             
             restartBtn.style.display = 'none';
             updateUI();
@@ -882,8 +887,6 @@ function rebuildMazeMesh(maze, device)
         `
     });
     const coinPipeline = pst_createPipeline(device, coinShader, layout, format);
- //   const coinUB = device.createBuffer({ size: 64, usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST });
-  //  const coinBG = device.createBindGroup({ layout, entries: [{ binding: 0, resource: { buffer: coinUB } }] });
 
     let coins = rebuildCoins(maze, device, layout);
 
@@ -1036,6 +1039,11 @@ function rebuildMazeMesh(maze, device)
             coins = rebuildCoins(maze, device, layout);
             superCoins = generateSuperCoins(maze, PST_SUPER_COIN_COUNT);
         }
+        
+        score = data.score || 0;
+        lives = data.lives || 3;
+        currentLevel = data.level || 1;
+        
         showReadyMessage();
     });
 
@@ -1078,28 +1086,6 @@ function rebuildMazeMesh(maze, device)
         serverFruit = null;
 
         console.log('Level up! Now on level ' + currentLevel);
-    });
-
-    socket.on('levelData', (data) =>
-    {
-        if (data.level)
-            currentLevel = data.level;
-
-        if (data.mazeGrid)
-        {
-            maze.setGrid(data.mazeGrid);
-            rebuildMazeMesh(maze, device);
-            coins = rebuildCoins(maze, device, layout);
-            superCoins = generateSuperCoins(maze, PST_SUPER_COIN_COUNT);
-        }
-
-        if (data.ghosts && Array.isArray(data.ghosts))
-        {
-            remoteGhosts = data.ghosts.filter(function(g)
-            {
-                return g && typeof g.x === 'number' && typeof g.y === 'number';
-            });
-        }
     });
 
     socket.on('gameOver', (data) =>
@@ -1173,6 +1159,14 @@ function rebuildMazeMesh(maze, device)
         pacman.tileY = 3;
         pacman.setDirection(1, 0);
 
+        if (socket && socket.connected)
+        {
+            socket.emit('resetGhostPositions', {
+                playerX: 3,
+                playerY: 3
+            });
+        }
+
         if (lives <= 0)
         {
             startDeathAnimation(deathPosX, deathPosY, true);
@@ -1189,12 +1183,11 @@ function rebuildMazeMesh(maze, device)
 
             if (socket && socket.connected)
                 socket.emit('playerDied', { lives });
-
         }
 
         updateUI();
     }
-
+    
     function checkCoinCollection()
     {
         if (isDying)
@@ -1218,15 +1211,6 @@ function rebuildMazeMesh(maze, device)
                     x: Math.floor(pacman.tileX),
                     y: Math.floor(pacman.tileY)
                 });
-            }
-
-            const allCollected = coins.every(c => c.collected);
-            if (allCollected && !levelTransition)
-            {
-                levelTransition = true;
-                levelTransitionTimer = PST_LEVEL_TRANSITION_DURATION;
-                ghostsHidden = true;
-                console.log('All coins collected! Waiting for level up...');
             }
         }
     }
@@ -1520,7 +1504,6 @@ function rebuildMazeMesh(maze, device)
 
             if (socket && socket.connected && !isDying)
             {
-                score += 10;
                 socket.emit('move', {
                     pacman: { x: pacman.tileX, y: pacman.tileY },
                     score,

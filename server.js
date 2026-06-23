@@ -53,7 +53,8 @@ app.get('/', (req, res) =>
 
 const server = http.createServer(app);
 const io = new Server(server, {
-    cors: {
+    cors:
+    {
         origin: "*",
         methods: ["GET", "POST"],
         credentials: true
@@ -147,13 +148,13 @@ const LEVEL_GHOST_CONFIGS = {
     3: ['red', 'blue', 'orange', 'pink', 'blinky', 'phantom']
 };
 
-const LEVEL_CONFIGS = {
-    1: { ghostSpeed: 1.5 },
-    2: { ghostSpeed: 2.0 },
-    3: { ghostSpeed: 2.5 }
-};
+// const LEVEL_CONFIGS = {
+//     1: { ghostSpeed: 1.5 },
+//     2: { ghostSpeed: 2.0 },
+//     3: { ghostSpeed: 2.5 }
+// };
 
-const FRUIT_TYPES = [
+const PST_FRUIT_TYPES = [
     { name: 'cherry', points: 100 },
     { name: 'strawberry', points: 200 },
     { name: 'orange', points: 300 },
@@ -267,7 +268,7 @@ function spawnNewFruit(map)
     }
 
     const cell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
-    const fruitType = FRUIT_TYPES[Math.floor(Math.random() * FRUIT_TYPES.length)];
+    const fruitType = PST_FRUIT_TYPES[Math.floor(Math.random() * PST_FRUIT_TYPES.length)];
 
     return {
         x: cell.x,
@@ -304,30 +305,6 @@ function getGhostSpeed(level)
     return Math.min(baseSpeed + (level - 1) * speedPerLevel, maxSpeed);
 }
 
-function getGhostsDataForLevel(level)
-{
-    const ghostSpeed = getGhostSpeed(level);
-    const config = LEVEL_GHOST_CONFIGS[level] || LEVEL_GHOST_CONFIGS[1];
-    const levelGhosts = [];
-
-    for (let i = 0; i < config.length; i++)
-    {
-        const template = GHOST_TEMPLATES[config[i]];
-        if (template)
-        {
-            levelGhosts.push({
-                x: template.startX,
-                y: template.startY,
-                dirX: 1,
-                dirY: 0,
-                type: template.type
-            });
-        }
-    }
-
-    return levelGhosts;
-}
-
 function broadcastToAll(event, data, excludeId)
 {
     for (let id in players)
@@ -342,13 +319,13 @@ function broadcastToAll(event, data, excludeId)
 function checkWinCondition(playerId)
 {
     const player = players[playerId];
-    if (!player) return false;
+
+    if (!player)
+      return false;
 
     const maxLevel = Object.keys(LEVEL_MAPS).length;
     if (player.playerLevel === maxLevel && player.collectedCoins >= PST_COINS_FOR_NEXT_LEVEL)
-    {
         return true;
-    }
 
     return false;
 }
@@ -356,18 +333,21 @@ function checkWinCondition(playerId)
 function declareWinner(playerId)
 {
     const player = players[playerId];
-    if (!player) return;
+    if (!player)
+      return;
 
     player.isWinner = true;
     gameWinner = playerId;
 
-    broadcastToAll("gameWinner", {
+    broadcastToAll("gameWinner", 
+    {
         id: playerId,
         nickname: player.nickname,
         score: player.score
     });
 
-    player.socket.emit("youWon", {
+    player.socket.emit("youWon",
+    {
         score: player.score,
         level: player.playerLevel
     });
@@ -378,7 +358,9 @@ function declareWinner(playerId)
 function resetGameForPlayer(playerId)
 {
     const player = players[playerId];
-    if (!player) return;
+
+    if (!player)
+      return;
 
     player.playerLevel = 1;
     player.playerMap = JSON.parse(JSON.stringify(LEVEL_MAPS[1]));
@@ -397,7 +379,8 @@ function resetGameForPlayer(playerId)
         type: g.type
     }));
 
-    player.socket.emit("gameReset", {
+    player.socket.emit("gameReset",
+    {
         level: 1,
         mazeGrid: player.playerMap,
         ghosts: ghostData,
@@ -414,14 +397,17 @@ function resetGameForPlayer(playerId)
 function updatePlayerGhosts(playerId)
 {
     const player = players[playerId];
-    if (!player) return;
+
+    if (!player)
+      return;
 
     const level = player.playerLevel;
     const map = player.playerMap;
     const ghostSpeed = getGhostSpeed(level);
     const config = LEVEL_GHOST_CONFIGS[level] || LEVEL_GHOST_CONFIGS[1];
 
-    if (!player.ghosts) {
+    if (!player.ghosts)
+    {
         player.ghosts = createGhostsForLevel(level);
     }
 
@@ -430,6 +416,7 @@ function updatePlayerGhosts(playerId)
     for (let i = 0; i < activeGhosts.length; i++)
     {
         const ghost = activeGhosts[i];
+
         ghost.speed = ghostSpeed;
 
         const currentTileX = Math.round(ghost.x);
@@ -438,6 +425,7 @@ function updatePlayerGhosts(playerId)
         if (!isTileValid(map, currentTileX, currentTileY) || isTileWall(map, currentTileX, currentTileY))
         {
             const validPos = findNearestFreeTile(map, ghost.x, ghost.y);
+
             ghost.x = validPos.x;
             ghost.y = validPos.y;
             ghost.tx = validPos.x;
@@ -459,33 +447,29 @@ function updatePlayerGhosts(playerId)
             {
                 const newX = currentTileX + directions[d][0];
                 const newY = currentTileY + directions[d][1];
+
                 if (isTileValid(map, newX, newY) && !isTileWall(map, newX, newY))
-                {
                     validDirections.push(directions[d]);
-                }
             }
 
             if (validDirections.length === 0)
-            {
                 continue;
-            }
 
             let possibleDirections = validDirections;
+
             if (validDirections.length > 1)
             {
                 const noBackDirections = [];
+
                 for (let d = 0; d < validDirections.length; d++)
                 {
                     const dir = validDirections[d];
+
                     if (!(dir[0] === -ghost.lastDirX && dir[1] === -ghost.lastDirY))
-                    {
                         noBackDirections.push(dir);
-                    }
                 }
                 if (noBackDirections.length > 0)
-                {
                     possibleDirections = noBackDirections;
-                }
             }
 
             possibleDirections.sort((a, b) =>
@@ -499,13 +483,9 @@ function updatePlayerGhosts(playerId)
 
             let chosenDirection;
             if (Math.random() < 0.8)
-            {
                 chosenDirection = possibleDirections[0];
-            }
             else
-            {
                 chosenDirection = possibleDirections[Math.floor(Math.random() * possibleDirections.length)];
-            }
 
             ghost.dirX = chosenDirection[0];
             ghost.dirY = chosenDirection[1];
@@ -555,14 +535,10 @@ function updatePlayerGhosts(playerId)
 setInterval(() =>
 {
     if (Object.keys(players).length === 0)
-    {
         return;
-    }
 
     for (let id in players)
-    {
         updatePlayerGhosts(id);
-    }
 
     fruitSpawnTimer -= 0.05;
 
@@ -576,7 +552,8 @@ setInterval(() =>
             
             if (currentFruit)
             {
-                broadcastToAll("fruitSpawned", {
+                broadcastToAll("fruitSpawned",
+                {
                     x: currentFruit.x,
                     y: currentFruit.y,
                     name: currentFruit.name,
@@ -591,7 +568,8 @@ setInterval(() =>
         if (fruitLifeTimer <= 0)
         {
             currentFruit.alive = false;
-            broadcastToAll("fruitExpired", {
+            broadcastToAll("fruitExpired",
+            {
                 x: currentFruit.x,
                 y: currentFruit.y
             });
@@ -612,7 +590,8 @@ io.on("connection", (socket) =>
         const playerLevel = currentLevel;
         const playerMap = JSON.parse(JSON.stringify(LEVEL_MAPS[playerLevel]));
 
-        players[socket.id] = {
+        players[socket.id] =
+        {
             socket: socket,
             nickname: nickname,
             pacman: { x: 3, y: 3 },
@@ -635,7 +614,8 @@ io.on("connection", (socket) =>
             type: g.type
         }));
 
-        socket.emit("init", {
+        socket.emit("init",
+        {
             id: socket.id,
             players: getAllPlayersData(),
             ghosts: ghostData,
@@ -659,7 +639,7 @@ io.on("connection", (socket) =>
         socket.broadcast.emit("newPlayer", {
             id: socket.id,
             nickname: nickname,
-            pacman: { x: 3, y: 3 },
+            pacman: { x: 2, y: 3 },
             score: 0,
             lives: 3,
             level: 1
@@ -672,17 +652,13 @@ io.on("connection", (socket) =>
     {
         const player = players[socket.id];
         if (!player)
-        {
             return;
-        }
         
         player.pacman = data.pacman || { x: 3, y: 3 };
         player.score = data.score || 0;
         player.lives = data.lives || 3;
         if (typeof data.level === 'number')
-        {
             player.playerLevel = data.level;
-        }
 
         socket.broadcast.emit("update", {
             id: socket.id,
@@ -700,10 +676,9 @@ io.on("connection", (socket) =>
         const x = Math.round(data.x);
         const y = Math.round(data.y);
         const player = players[socket.id];
+
         if (!player)
-        {
             return;
-        }
 
         const playerMap = player.playerMap;
         
@@ -726,13 +701,9 @@ io.on("connection", (socket) =>
                 }
 
                 if (player.playerLevel < Object.keys(LEVEL_MAPS).length)
-                {
                     player.playerLevel++;
-                }
                 else
-                {
                     player.playerLevel = 1;
-                }
 
                 player.playerMap = JSON.parse(JSON.stringify(LEVEL_MAPS[player.playerLevel]));
                 player.collectedCoins = 0;
@@ -778,10 +749,9 @@ io.on("connection", (socket) =>
             currentFruit.alive = false;
             
             const player = players[socket.id];
+            
             if (player)
-            {
                 player.score = (player.score || 0) + currentFruit.points;
-            }
 
             broadcastToAll("fruitCollected", {
                 x: currentFruit.x,
@@ -798,10 +768,9 @@ io.on("connection", (socket) =>
     socket.on("playerDied", (data) =>
     {
         const player = players[socket.id];
+
         if (!player)
-        {
             return;
-        }
 
         player.lives = data.lives || 0;
         socket.broadcast.emit("playerDied", {
@@ -821,15 +790,15 @@ io.on("connection", (socket) =>
     socket.on("setNickname", (data) =>
     {
         const player = players[socket.id];
+
         if (!player)
-        {
             return;
-        }
 
         const newName = (data && data.nickname && data.nickname.trim()) || 'Player';
         player.nickname = newName;
 
-        broadcastToAll("nicknameUpdate", {
+        broadcastToAll("nicknameUpdate",
+        {
             id: socket.id,
             nickname: newName
         }, socket.id);
@@ -838,10 +807,9 @@ io.on("connection", (socket) =>
     socket.on("messageToServer", (msg) =>
     {
         const player = players[socket.id];
+
         if (!player)
-        {
             return;
-        }
 
         console.log(player.nickname + ': ' + msg);
         broadcastToAll("messageFromServer", player.nickname + ': ' + msg);
@@ -850,7 +818,9 @@ io.on("connection", (socket) =>
     socket.on("resetGame", () =>
     {
         const player = players[socket.id];
-        if (!player) return;
+
+        if (!player)
+          return;
 
         resetGameForPlayer(socket.id);
         console.log('Player ' + player.nickname + ' reset the game');
@@ -859,6 +829,7 @@ io.on("connection", (socket) =>
     socket.on("disconnect", () =>
     {
         const player = players[socket.id];
+
         console.log('Client disconnected: ' + socket.id);
 
         if (player)
