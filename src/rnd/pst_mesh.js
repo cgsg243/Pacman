@@ -57,9 +57,11 @@ export class Pst_Mesh
 
         return new Pst_Mesh(device, new Float32Array(verts), new Uint16Array(inds));
     }
+
     static createCircle(device, radius, segments = 32)
     {
-       const prim = Pst_Primitive.circle(radius, segments, 0, 0);
-       return new Pst_Mesh(device, prim.vertices, prim.indices);
+        const prim = Pst_Primitive.circle(radius, segments, 0, 0);
+
+        return new Pst_Mesh(device, prim.vertices, prim.indices);
     }
 }

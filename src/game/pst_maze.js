@@ -31,23 +31,37 @@ export class Pst_Maze
         this.mesh = null;
     }
 
+    setGrid(newGrid)
+    {
+        this.grid = newGrid;
+        this.height = newGrid.length;
+        this.width = newGrid[0].length;
+    }
+
     isWall(x, y)
     {
         if (y < 0 || y >= this.grid.length)
-          return true;
+            return true;
+
         if (x < 0 || x >= this.grid[0].length)
-          return true;
+            return true;
+
         return this.grid[y][x] === 1;
     }
 
-    setMesh(mesh) { this.mesh = mesh; }
+    setMesh(mesh)
+    {
+        this.mesh = mesh;
+    }
 
     isCoin(x, y)
     {
         if (y < 0 || y >= this.grid.length)
-          return false;
+            return false;
+
         if (x < 0 || x >= this.grid[0].length)
-          return false;
+            return false;
+
         return this.grid[y][x] === 2;
     }
 
@@ -61,6 +75,7 @@ export class Pst_Maze
                 return true;
             }
         }
+
         return false;
     }
 
@@ -74,7 +89,7 @@ export class Pst_Maze
 
     isOut(x, y)
     {
-       return x < 0 || x >= this.width || y < 0 || y >= this.height;
+        return x < 0 || x >= this.width || y < 0 || y >= this.height;
     }
 
     getCountMoney()
@@ -86,22 +101,24 @@ export class Pst_Maze
             for (let x = 0; x < this.width; x++)
             {
                 if (this.grid[y][x] === 2)
-                  g++;
+                    g++;
             }
         }
+
         return g;
     }
 
     draw(device, pass, pipeline, bindGroup, uniformBuffer, scaleX, scaleY)
     {
         const model = new Float32Array(16);
+
         model.fill(0);
-        
+
         model[0] = scaleX;
-        model[5] = scaleY; 
+        model[5] = scaleY;
         model[10] = 1;
-        model[12] = -1.0; 
-        model[13] = -1.0;  
+        model[12] = -1.0;
+        model[13] = -1.0;
         model[15] = 1;
 
         device.queue.writeBuffer(uniformBuffer, 0, model);

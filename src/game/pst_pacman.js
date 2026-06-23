@@ -38,6 +38,7 @@ export class Pst_Pacman
             {
                 const nx = this.tileX + this.nextDirX;
                 const ny = this.tileY + this.nextDirY;
+                
                 if (!this.maze.isWall(nx, ny))
                 {
                     this.prevTileX = this.tileX;
